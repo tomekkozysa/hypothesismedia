@@ -1,6 +1,6 @@
 <template>
   <article class="homepage-story">
-  <!-- <section class="homepage-story-slide slide-snap">
+  <section class="homepage-story-slide slide-snap">
 
     <h3 class="homepage-story-slide-headline">
       Broadcast Audience & Fan Engagement Consultancy
@@ -8,7 +8,9 @@
     <div class="homepage-story-slide-content">
 
     </div>
-  </section> -->
+  </section>
+
+
 
 
 
@@ -33,6 +35,29 @@
   </section> -->
 
 
+<section class="homepage-story-slide js-observed slide-snap">
+    <h3 class="homepage-story-slide-headline">Who we are</h3>
+    <div class="homepage-story-slide-content">
+      Broadcast Audience & Fan Engagement Consultancy.
+      
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum quis lacus sit amet blandit. Morbi et tempor eros. Integer auctor et tellus ac ultrices. Cras sit amet mattis dolor, sit amet pellentesque est. Praesent a urna vel nulla laoreet malesuada ut sed arcu. Sed et nunc eget orci tincidunt viverra sit amet ut ex. Sed pellentesque leo aliquam, tincidunt elit eu, dignissim mi. Ut non dignissim nunc. Quisque a ipsum sed metus ullamcorper placerat. Aliquam sit amet dui ac magna tristique tincidunt eget at leo. Etiam at sem lorem. Sed vehicula tincidunt consectetur. Cras ac venenatis tortor.
+
+<!-- Vivamus ipsum sem, sodales a volutpat sit amet, bibendum non tellus. Suspendisse ac sem non neque efficitur auctor vitae vitae sapien. Curabitur imperdiet lectus non varius sodales. Donec hendrerit posuere diam. In pretium facilisis massa, ac consectetur tellus imperdiet eu. In hac habitasse platea dictumst. Suspendisse mollis at mi eget sollicitudin. -->
+
+<!-- Nulla pellentesque fermentum mauris sit amet tincidunt. Maecenas tincidunt aliquet enim a sodales. Ut accumsan faucibus velit, eget tristique dui suscipit eget. Sed eget blandit sapien. Ut orci erat, condimentum in lorem ut, ultrices congue mi. Donec vulputate metus facilisis velit tristique, eget mollis nibh fermentum. Aliquam erat volutpat. -->
+
+
+    </div>
+    
+    <div class="homepage-story-slide-content">
+      <Grid />
+    </div>
+
+  </section>
+
+
+
+
   <section class="homepage-story-slide slide-snap">
     <h3 class="homepage-story-slide-headline">What we do</h3>
 
@@ -46,7 +71,7 @@
 
       <li class="homepage-content-list-item js-observed js-toggle slide-snap">
         <Expander>
-          Social Media Voting/GamificationFan/Audience Engagement Strategy 
+          Social Media Voting/Gamification Fan/Audience Engagement Strategy 
         </Expander>
       </li>
 
@@ -60,17 +85,11 @@
 
   </section>
 
-  <section class="homepage-story-slide js-observed slide-snap">
-    <h3 class="homepage-story-slide-headline">Who we are</h3>
-    <div class="homepage-story-slide-content">
-      Broadcast Audience & Fan Engagement Consultancy
-    </div>
-  </section>
-
+  
   <section class="homepage-story-slide js-observed slide-snap">
     <Cascade />   
   </section>
-  <footer class="slide-snap"></footer>
+  
 </article>
   
 </template>
@@ -79,6 +98,7 @@
 
 import Expander from '~/components/Expander.vue';
 import Cascade from '~/components/Cascade.vue';
+import Grid from '~/components/Grid.vue';
 
 
 /*
@@ -149,7 +169,9 @@ export default {
   components:{
     
     Expander,
-    Cascade
+    Cascade,
+    Grid
+
   
   },
 
@@ -162,50 +184,19 @@ export default {
 </script>
 
 <style>
-:root{
-  
-  --c-dark:#270949;
-  --c-light:#4654A3;
-  
-  --cg-main:linear-gradient(0deg, var(--c-light) 0%, var(--c-dark) 100%);
 
-  --fs-headline:4.6rem;  
-  --fs-headline-small:3.2rem;
-  --fs-list-item:2.4rem;
-    --fs-body:1.2rem;
-  
-  
-  --fs-cs-headline:2.2rem;
-  --fs-cs-blurb: 1.4rem;
-  --l-max-w:auto;
-  
-}
 
-html { /* body won't work ¯\_(ツ)_/¯ */
-  scroll-snap-type: y mandatory;
-}
 
-body{ 
-  
-  font-family:'Helvetica Neue', Arial, sans-serif;
-  padding:0;
-  margin:0;
-  background:var(--c-dark);
-/*     background:var(--c-dark) var(--cg-main) no-repeat 0 50vh; */
-  background-attachment:fixed;
-  background-size:100vw 50vh;
-  color:white;
-   
-}
 .homepage-story{
     box-sizing:border-box;
     max-width: var(--l-max-w);
 }
 
-* {  box-sizing:border-box;}
+
 
 .slide-snap{
     scroll-snap-align: start;
+    
 }
 .homepage-story-slide{
 
@@ -230,7 +221,8 @@ body{
 
 
 .homepage-story-slide-content{
-    font-size:var(--fs-headline-small); letter-spacing:-.04em;
+    margin-top:1em;
+    font-size:var(--fs-body); letter-spacing:-.04em;
 
 /*   transform:translateX(-80px); */
 /*   opacity:0.02; */
@@ -246,6 +238,7 @@ body{
 
 .homepage-content-list{
   list-style:none;
+  margin-top:1em;
   padding:0;
 }
 

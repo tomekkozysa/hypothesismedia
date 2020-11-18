@@ -4,16 +4,25 @@
 
 
 
-<div class="case-study-teaser">
-             <div class="case-study-teaser-img"></div>
-            <div class="case-study-teaser-caption" >
 
+
+
+
+
+
+<div class="case-study-teaser">
+            <div class="case-study-teaser-media">
+              <img src="/case-studies/thebritawards.png" class="case-study-teaser-img">
+            </div>
+            <div class="case-study-teaser-caption" >
           <h3 class="case-study-headline">The Brit Awards</h3>
           <p class="case-study-blurb"> Live Social Voting </p>
           </div>
         </div>
 <div class="case-study-teaser">
-             <div class="case-study-teaser-img"></div>
+            <div class="case-study-teaser-media">
+              <img src="/case-studies/themillionpounddrop.png" class="case-study-teaser-img">
+            </div>
             <div class="case-study-teaser-caption" >
 
           <h3 class="case-study-headline">The Million Pound Drop</h3>
@@ -21,7 +30,9 @@
           </div>
         </div>
 <div class="case-study-teaser">
-             <div class="case-study-teaser-img"></div>
+            <div class="case-study-teaser-media">
+              <img src="/case-studies/crufts.png" class="case-study-teaser-img">
+            </div>
             <div class="case-study-teaser-caption" >
 
           <h3 class="case-study-headline">Crufts</h3>
@@ -29,7 +40,9 @@
           </div>
         </div>
 <div class="case-study-teaser">
-             <div class="case-study-teaser-img"></div>
+            <div class="case-study-teaser-media">
+              <img src="/case-studies/thevoice.png" class="case-study-teaser-img">
+            </div>
             <div class="case-study-teaser-caption" >
 
           <h3 class="case-study-headline">The Voice</h3>
@@ -37,7 +50,9 @@
           </div>
         </div>
 <div class="case-study-teaser">
-             <div class="case-study-teaser-img"></div>
+            <div class="case-study-teaser-media">
+              <img src="/case-studies/edsheeran.png" class="case-study-teaser-img">
+            </div>
             <div class="case-study-teaser-caption" >
 
           <h3 class="case-study-headline">Ed Sheeran 'X' </h3>
@@ -45,7 +60,9 @@
           </div>
         </div>
 <div class="case-study-teaser">
-             <div class="case-study-teaser-img"></div>
+            <div class="case-study-teaser-media">
+              <img src="/case-studies/yearsandyears.png" class="case-study-teaser-img">
+            </div>
             <div class="case-study-teaser-caption" >
 
           <h3 class="case-study-headline">Years & Years - 'Shine'</h3>
@@ -62,7 +79,7 @@
 export default{
 
     name:'Cascade',
-    data(){},
+    
     mounted(){},
     methods:{}      
 
@@ -71,44 +88,85 @@ export default{
 <style>
 
 .case-study-teaser{
-   padding:2em 0;
+   padding:5em 0;
    scroll-snap-align: start;
-   margin:2em 0;
+   /* margin:5em 0; */
    display:flex;
-    
+   min-height: 30vh;
+    display: flex;
+    align-items: center; 
 }
 .case-study-teaser:nth-child(odd){
     flex-direction: row-reverse;
 
 }
+.case-study-teaser-media{
+  width: 50%;
+  background: var(--c-dark);
+  border-radius:.5em;
+  position: relative;
+
+}
 .case-study-teaser-img{
+
+  
   display:block;
-  width:70%;
-  min-height: 50vh;
-  background:rgba(0,0,0,0.3);
-  border:0;
-  border-radius:.2em;
-  position:relative;
+  width:100%;
+  height:auto;
+  /* height:100%; */
+  /* width:50%; */
+  /* min-height: 50vh; */
+  /* background:rgba(0,0,0,0.3); */
+     /* mix-blend-mode: multiply; */
+      
+  /* border:0; */
+  border-radius:.5em;
+  
+  object-fit: cover;
+  mix-blend-mode: screen;
+  opacity:.7;
 }
 
-/* .case-study-teaser-img::after{
+.case-study-teaser-media::after{
   display:block;
   position:absolute;
+   top:-5px;
+  left:5px;
   z-index:100;
   content:" ";
-  width:320px;
-  height:180px;
-  border:1px solid rgba(255,255,255,.5);
-  border-radius:.2em;
-  background:rgba(100,200,90,0);
-  transform:translate(5px, -5px);
-} */
+  width:100%;
+  height: 100%;
+  border-radius:.5em;
+  opacity:.5;
+   /* background-blend-mode: overlay; */
+  /* background:var(--c-light); */
+  border:2px solid var(--c-light);
+  
+} 
+
+/* .case-study-teaser-media::before{
+  display:block;
+  position:absolute;
+ top:5px;
+  left:-5px;
+  
+  z-index:-100;
+  content:" ";
+  width:100%;
+  height: 100%;
+  border-radius:.5em;
+  opacity:.2;
+   background-blend-mode: overlay;
+  background:var(--c-light);
+  
+}  */
+
 
 
 .case-study-teaser-caption{
   font-size:var(--fs-body);
   padding:1em;
-  width:30%;
+  width:50%;
   align-self: center;
 }
 

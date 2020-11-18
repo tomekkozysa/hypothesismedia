@@ -1,8 +1,13 @@
 <template>
-    <div ref="zone" :class="{expander:true, is_expanded:is_expanded}">
+    <div ref="zone" class="expander" :class="{is_expanded:is_expanded}">
         <slot>
           
         </slot>
+
+
+        <div :class="{ex_content:true, is_expanded:is_expanded}">
+
+        </div>
     </div>
 
 
@@ -41,15 +46,29 @@ export default{
 </script>
 <style>
 .expander{
-    min-height:1px;
+    /* min-height:1px; */
     cursor:pointer;
-    transition:min-height .50s ease-out;
+    /* transition:min-height .50s ease-out; */
     padding:.3em 0;
-    
 }
-.is_expanded{
-    min-height:80vh;  
-    transition:min-height .75s;
+
+.expander.is_expanded{
+    /* min-height:80vh;   */
+   
+}
+.ex_content{
+    margin-top:0;
+    min-height:0px;
+    background:var(--c-light);
+    opacity:.5;
+    mix-blend-mode: overlay;
+    transition:min-height .5s, margin-top .25s ease-in-out .26s;
+}
+.ex_content.is_expanded{
+    min-height:60vh;
+    margin-top:1em;
+    transition:min-height .5s, margin-top .25s;
+     
 }
 @keyframes wow {
   0%   { background-position: 0px 50%; }
