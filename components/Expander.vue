@@ -61,7 +61,7 @@ export default{
     min-height:0px;
     background:var(--c-light);
     opacity:.5;
-    mix-blend-mode: overlay;
+    
     transition:min-height .5s, margin-top .25s ease-in-out .26s;
 }
 .ex_content.is_expanded{

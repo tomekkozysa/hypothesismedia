@@ -36,15 +36,27 @@
 
   --fs-headline:4.6rem;  
   --fs-headline-small:3rem;
-  --fs-list-item:3rem;
-    --fs-body:1.8rem;
-    --fs-navigation:1.4rem;
+  --fs-list-item:2.4rem;
+  --fs-body:1.8rem;
+  --fs-navigation:1rem;
   
   
   --fs-cs-headline:3rem;
   --fs-cs-blurb: 2.2rem;
-  --l-max-w:1600px;
-  
+  --l-max-w:1400px;
+  --u-logo-width:140px; 
+
+
+
+    
+  --story-border-total-length:3125px;
+  --story-border-length:calc( var(--story-border-total-length) - var(--story-border-space));
+  --story-border-space:1200px;
+  --story-border-offset:0;
+  --story-border-sw:2;
+
+
+
 }
 
 
@@ -71,7 +83,7 @@ html {
 html { /* body won't work ¯\_(ツ)_/¯ */
   /* scroll-snap-type: y mandatory; */
   scroll-snap-type: y proximity;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 200px;
 }
 
 body{ 
@@ -82,7 +94,8 @@ body{
   background:var(--c-dark);
   /* text-shadow: var(--c-light) 1px 1px 0; */
 
-  background:var(--c-dark) var(--cg-main) no-repeat 0;
+  /* background:var(--c-dark) var(--cg-main) no-repeat 0; */
+  /* background:url(/img/tmp3.gif); */
   background-attachment:fixed;
   background-size:100vw 100vh;
   color:var(--c-body);
@@ -113,16 +126,18 @@ body{
   position: -webkit-sticky;
   position: sticky;
   top:0;
-  z-index:3000;
+  z-index:500000;
 /* scroll-snap-align: start; */
 padding:2em;
-    background:transparent var(--cg-header) no-repeat 0;
+    /* background:transparent var(--cg-header) no-repeat 0; */
+    /* background:var(--c-dark); */
+    background:transparent
   /* background-attachment:fixed; */
   /* background-size:100vw 50vh; */
 
 }
 .header-logo{
-  width:180px;
+  width:var(--u-logo-width);
   filter:brightness(200);
 }
 .header-navigation{
@@ -138,10 +153,20 @@ padding:2em;
   align-items: flex-end;
   justify-content: flex-end;
   justify-items: flex-end;
+  display: inline;
+  /* border:1px solid var(--c-light); */
+  padding:1em;
+  border-radius:.5em;
+  background:var(--c-dark);
+
+
 }
+
 .header-navigation-list-item{
   display:inline-block;
   font-size:var(--fs-navigation);
-  padding:.25em;
+  padding:.25em 1em;
+  font-weight:500;
+  
 }
 </style>
