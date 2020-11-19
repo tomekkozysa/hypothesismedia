@@ -40,9 +40,9 @@
 
  <!-- <img src="/img/tmp3.gif" class="homepage-intro-story-img " /> -->
  
- <img src="/img/eds1@2x.jpg" class="homepage-intro-story-img -ic1" />
+ <img src="/img/eds1.jpg" class="homepage-intro-story-img -ic1" />
  <img src="/img/tmp3.jpg" class="homepage-intro-story-img -ic2" />
- <img src="/img/eds2@2x.jpg" class="homepage-intro-story-img -ic3" />
+ <img src="/img/eds2.jpg" class="homepage-intro-story-img -ic3" />
     <div class="homepage-intro-story-media" >
         
        
