@@ -46,9 +46,10 @@ export default{
     display:flex;
     flex-flow:row wrap;
     opacity:.8;
+    margin-top:3em;
 }
 .grid-item{
-   padding:2em 0;
+   padding:2em 1.5em;
    
    margin:.1em;
    display:flex;

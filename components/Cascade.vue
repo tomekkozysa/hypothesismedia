@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <h3 class="homepage-story-slide-headline">Case studies</h3>
+        <!-- <h3 class="homepage-story-slide-headline">Case studies</h3> -->
 
 
 
@@ -85,12 +85,11 @@ export default{
 
 }
 </script>
-<style>
-
+<style scoped>
+/*
 .case-study-teaser{
    padding:5em 0;
    scroll-snap-align: start;
-   /* margin:5em 0; */
    display:flex;
    min-height: 30vh;
     display: flex;
@@ -113,13 +112,6 @@ export default{
   display:block;
   width:100%;
   height:auto;
-  /* height:100%; */
-  /* width:50%; */
-  /* min-height: 50vh; */
-  /* background:rgba(0,0,0,0.3); */
-     /* mix-blend-mode: multiply; */
-      
-  /* border:0; */
   border-radius:.5em;
   
   object-fit: cover;
@@ -138,13 +130,11 @@ export default{
   height: 100%;
   border-radius:.5em;
   opacity:.5;
-   /* background-blend-mode: overlay; */
-  /* background:var(--c-light); */
-  border:2px solid var(--c-light);
+   border:2px solid var(--c-light);
   
 } 
 
-/* .case-study-teaser-media::before{
+ .case-study-teaser-media::before{
   display:block;
   position:absolute;
  top:5px;
@@ -158,8 +148,7 @@ export default{
   opacity:.2;
    background-blend-mode: overlay;
   background:var(--c-light);
-  
-}  */
+  }
 
 
 
@@ -171,5 +160,5 @@ export default{
 }
 
 
-
+*/
 </style>
