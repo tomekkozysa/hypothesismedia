@@ -63,13 +63,13 @@ export default{
 
   position:fixed;
   top:0;
-  right:-50%;
+  right:-300px;
   z-index:2000;
-  width:auto;
+  width:300px;
   height:100vh;
   
-  background:rgba(0,0,0,.2);
-  /* background:var(--c-light); */
+  /* background:rgba(0,0,0,.2); */
+  background:var(--c-dark);
   transition: right .75s;
   /* border-left:1px solid pink; */
 }

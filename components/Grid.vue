@@ -49,7 +49,7 @@ export default{
     margin-top:3em;
 }
 .grid-item{
-   padding:2em 1.5em;
+   padding:2em 1em;
    
    margin:.1em;
    display:flex;
