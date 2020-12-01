@@ -1,6 +1,6 @@
 <template>
     
-     <div class="homepage-intro-story st2" ref="js-clock">
+     <div class="homepage-intro-story st1" ref="js-clock">
     
     <div class="homepage-intro-story-copy -ic1">
         <h3 class="homepage-intro-story-headline -ic1">
