@@ -79,7 +79,7 @@ Working with best of breed industry partners to streamline, innovate and deliver
 import anime from 'animejs/lib/anime.min.js';
 import Expander from '~/components/Expander.vue';
 import CascadeTwo from '~/components/CascadeTwo.vue';
-import Slideshow from '~/components/Slideshow3.vue';
+import Slideshow from '~/components/Slideshow4.vue';
 import Grid from '~/components/Grid.vue';
 
 
