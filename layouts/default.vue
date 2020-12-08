@@ -60,7 +60,7 @@ export default{
   
   --c-dark:#270949;
   --c-light:#4654A3;
-  --c-body:rgba(255,255,255,.7);
+  --c-body:rgba(255,255,255,.75);
   
   --cg-header:linear-gradient(0deg, rgba(0,0,0,0) 0%, var(--c-dark) 30%, var(--c-dark) 100%);
   --cg-main:linear-gradient(0deg, var(--c-light) 0%, var(--c-dark) 50%);
@@ -77,7 +77,7 @@ export default{
   --fs-cs-data: 2.4rem;
   --fs-cs-data: 2.4rem;
 
-  --l-max-w:1200px;
+  --l-max-w:1400px;
   --u-logo-width:140px; 
 
   --u-nav-icon-size:30px;
@@ -156,7 +156,7 @@ body{
 }
 
 .main{
-  padding:80px;
+  padding:0 80px;
   max-width: var(--l-max-w);
   margin: 0 auto;
 }
