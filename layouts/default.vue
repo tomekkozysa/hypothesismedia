@@ -8,6 +8,7 @@
        <hgroup class="header-main-split">
           
         <img src="/hypothesismedia-logo.svg" class="header-logo"  />
+        
         <NavigationToggle :expanded="navigation_expanded" @click.native="navToggle"
           class="header-navigation-toggle-button" />
       
@@ -17,8 +18,8 @@
         
       
     </header>
-     <Navigation :expanded="navigation_expanded" />
-    <Nuxt class="main" />
+     <Navigation :expanded="navigation_expanded" :current="navigation_position" />
+    <Nuxt class="main" @onSection="onSection" />
     <footer class="slide-snap"></footer>
   </div>
 </template>
@@ -40,13 +41,105 @@ export default{
     data(){
       return{
         navigation_expanded:false,
+        navigation_position:'home',
+        currententry:null,
+        pre:null,
+        
       }
     },
+    mounted(){
+   
+    const images = document.querySelectorAll('.js-observed');
+    let max = 0;
+    let target = null;
+    let lastentry = null;
+    // let currententry = null;
+
+    let options = {
+  // root: document.querySelector('#scrollArea'),
+  rootMargin: '0px',
+    // threshold: [0,.1,.2,.3,.4,.5,.6,.7,.8,.9,1]
+    threshold: this.generateThresholds(100),
+}
+
+this.observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+
+    this.pre = 'entry :' + entry.target.id + ' | ' + entry.intersectionRatio;
+
+
+    if(!this.currententry){
+           this.currententry = entry;
+    }
+    if(entry.intersectionRatio > .2 || entry.target.id == this.currententry.target.id){
+         this.currententry = entry;
+      }
+      
+      // if (entry.intersectionRatio  / entry.target.clientHeight >= this.currententry.intersectionRatio / this.currententry.target.clientHeight){
+      //    this.currententry = entry;
+      // }
+
+
+
+      target = this.currententry.target.id;
+
+
+    if(entry.isIntersecting){
+
+
+      
+      // if(lastentry == null){
+      //   lastentry = entry;
+      // }
+  
+      
+      // if (entry.intersectionRatio >= lastentry.intersectionRatio){
+      //    target = entry.target.id;
+      // }
+      // else{
+      //    target = lastentry.target.id;
+      // }
+
+      //  lastentry = entry;
+
+    }
+    
+    
+  });
+  this.onSection(target);
+},options);
+
+images.forEach(image => {
+  this.observer.observe(image);
+});
+
+
+  },
+
     methods:{
+
+      generateThresholds:function(max){
+
+        let t = [];
+        for(var i=0; i< max; i++){
+          
+          t.push(i/max);
+
+        }
+        return t;
+
+      },
+      
       navToggle:function(e){
-        console.log('adasdaksjdhkajs daksjdhkasjdhkasjdh')
+        
         this.navigation_expanded = !this.navigation_expanded;
       },
+      
+      onSection:function(section){
+          if(section){
+            this.navigation_position = section
+          }
+      }
     }
     
 
@@ -176,7 +269,8 @@ body{
   top:0;
   z-index:500000;
 /* scroll-snap-align: start; */
-padding:2em;
+padding:2em 10px 2em 2em;
+
     /* background:transparent var(--cg-header) no-repeat 0; */
     /* background:var(--c-dark); */
     background:transparent
