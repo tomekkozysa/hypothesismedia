@@ -1,6 +1,6 @@
 <template>
     
-     <div class="homepage-intro-story st1" ref="js-clock">
+     <div class="homepage-intro-story st1 js-clock" ref="js-clock">
     
     <div class="homepage-intro-story-copy -ic1">
         <h3 class="homepage-intro-story-headline -ic1">
@@ -64,29 +64,59 @@
 <script>
 export default{
 
-    name:'Slideshow5',
+    name:'Slideshow4',
     data(){
     return{
       clockInterval:0,
       intervalTime:4000,
       intervalArray:['st1','st2','st3'],
       currentIndex:0,
+      animate : false,
     }
   },
     mounted(){
         this.clockInterval = setInterval(()=>{
 
+            if(!this.animate){
+                return;
+            }
+
           this.updateClock();
 
-    },this.intervalTime);
+    },this.intervalTime)
 
 
-  
+
+
+
+
+    
+
+        let options = {
+            rootMargin: '0px',
+            threshold: [0,.1,.2,.3,.4,.5,.6,.7,.8,.9,1]
+        }
+        this.observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {    
+            if(entry.isIntersecting){
+                if(entry.intersectionRatio > .5){
+                    this.animate = true;
+                }
+            }
+            else{
+                this.animate = false;
+            }
+            });
+    
+        },options);
+
+        this.observer.observe(this.$refs['js-clock']);
+    
     },
     methods:{
 
         updateClock(){
-      
+            
       let current = this.currentIndex+1 > 2 ? 0 :  this.currentIndex+1;
 
       let c = this.$refs['js-clock'];
@@ -359,21 +389,21 @@ export default{
 
 
 .homepage-intro-story-img.-ic1{
-    grid-column: 1 / 8;
-    grid-row: 2 / 8;
-    max-height:90%;
+    grid-column: 2 / 12;
+    grid-row: 1 / 9;
+    /* max-height:90%; */
     align-self: center;
 }
 .homepage-intro-story-img.-ic2{
-    grid-column: 5 / 13;
-    max-width:90%;
+    grid-column: 2 / 12;
+    /* max-width:90%; */
     justify-self: center;
-    grid-row: 2 / 7;
+    grid-row: 1 / 9;
     align-self: end;
 }
 .homepage-intro-story-img.-ic3{
-    grid-column: 1 / 8;
-    grid-row: 3 / 8;
+    grid-column: 2 / 12;
+    grid-row: 1 / 9;
     align-self: end;
 }
 
@@ -434,11 +464,12 @@ export default{
 
 .homepage-intro-story-border{
 
-  
+  z-index:1010;
   width:calc(100%);
-  height:calc(100% - 80px);
+  /* height:calc(100% - 80px); */
 
-  transform:translate(0px, 40px);
+  /* transform:translate(0px, 40px); */
+  height:100%;
   transition:all .75s;
 
 
@@ -477,7 +508,7 @@ export default{
 }
 
 
-/* 
+
 .st1 .blur.-ic1{  opacity:var(--blur-opacity-on); }
 .st2 .blur.-ic1{  opacity:var(--blur-opacity-off); }
 .st3 .blur.-ic1{  opacity:var(--blur-opacity-off); }
@@ -490,26 +521,8 @@ export default{
 .st1 .blur.-ic3{  opacity:var(--blur-opacity-off); }
 .st2 .blur.-ic3{  opacity:var(--blur-opacity-off); }
 .st3 .blur.-ic3{  opacity:var(--blur-opacity-on); }
- */
 
-.blur.-ic1{   
 
-    grid-column: 1 / 12;
-    grid-row: 1 / 6; 
-
-}
-.blur.-ic1{  
-        
-    grid-column: 1 / 8;
-    grid-row: 1 / 8; 
-
-}
-.blur.-ic1{      
-    
-    grid-column: 8 / 13;
-    grid-row: 1 / 4; 
-
-}
 
 
 .blur{
@@ -518,15 +531,16 @@ export default{
     grid-column: 2 / 12;
     grid-row: 3 / 7;
 
-    filter:blur(10px);
+    filter:blur(150px);
     object-fit: cover;
     z-index:-1;
     width:100%;
     height:100%;
-    opacity: .1;
     
     /* display:none; */
 }
+
+
 
 
 </style>
