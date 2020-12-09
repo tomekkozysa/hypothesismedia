@@ -2,7 +2,7 @@
   <article class="homepage-story">
   
 
-  <section id="home" class="homepage-story-slide slide-snap">
+  <section id="home" class="homepage-story-slide slide-snap js-observed">
 
 
     <Slideshow />
@@ -13,7 +13,7 @@
 
 
 
-<section id="who-we-are" class="homepage-story-slide js-observed slide-snap">
+<section id="who-we-are" class="homepage-story-slide js-observed slide-snap is_full-size">
     <h3 class="homepage-story-slide-headline">Who we are</h3>
     <div class="homepage-story-slide-content who-we-are-copy">
       We are a niche consultancy specialising in interactive and audience engagement innovation across live broadcast and events.
@@ -34,24 +34,24 @@ Working with best of breed industry partners to streamline, innovate and deliver
 
 
 
-  <section id="what-we-do" class="homepage-story-slide slide-snap">
+  <section id="what-we-do" class="homepage-story-slide slide-snap js-observed">
     <h3 class="homepage-story-slide-headline">What we do</h3>
 
     <ul class="homepage-content-list ">
 
-      <li class="homepage-content-list-item js-observed js-toggle slide-snap">
+      <li class="homepage-content-list-item js-toggle slide-snap">
         <Expander>
           Live Audience & Viewer Engagement Executive Production
         </Expander>
       </li>
 
-      <li class="homepage-content-list-item js-observed js-toggle slide-snap">
+      <li class="homepage-content-list-item js-toggle slide-snap">
         <Expander>
           Social Media Voting/Gamification Fan/Audience Engagement Strategy 
         </Expander>
       </li>
 
-      <li class="homepage-content-list-item js-observed js-toggle slide-snap">
+      <li class="homepage-content-list-item js-toggle slide-snap">
         <Expander class="homepage-content-list-item-content">
           Format & Concept Ideation 
         </Expander>
@@ -67,7 +67,7 @@ Working with best of breed industry partners to streamline, innovate and deliver
     <Cascade  class="homepage-story-slide-content" />   
   </section>
 
-  <section id="contact" class="homepage-story-slide slide-snap">
+  <section id="contact" class="homepage-story-slide slide-snap js-observed ">
     <h3 class="homepage-story-slide-headline">Contact</h3>
   </section>
   
@@ -97,17 +97,42 @@ export default {
   
   },
 
+  
+
   mounted(){
    
+//    const images = document.querySelectorAll('.js-observed');
+
+// this.observer = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
+//     if (entry.intersectionRatio > 0) {
+//       // entry.target.classList.add('fancy');
+//       console.log(entry.target.id+'  '+entry.intersectionRatio);
+//       this.shout(entry.target.id);
+//     } else {
+//       entry.target.classList.remove('fancy');
+//     }
+//   });
+// });
+
+// images.forEach(image => {
+//   this.observer.observe(image);
+// });
+
+
   },
 
   data(){
     return{
-      
+      observer:null,
     }
   },
   methods:{
 
+      shout:function(what){
+        // alert('argh!'+what)
+        this.$emit('onSection'+what)
+      }
     
   },
 }
@@ -140,6 +165,12 @@ export default {
   width:100%;
   min-height:80vh;
   padding:0;
+
+}
+.homepage-story-slide.is_full-size{
+
+  min-height:90vh;
+  
 
 }
 
