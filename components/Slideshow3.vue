@@ -79,6 +79,31 @@ export default{
           this.updateClock();
 
     },this.intervalTime)
+
+
+     let options = {
+            rootMargin: '0px',
+            threshold: [0,.1,.2,.3,.4,.5,.6,.7,.8,.9,1]
+        }
+        this.observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {    
+            if(entry.isIntersecting){
+                if(entry.intersectionRatio > .5){
+                    this.animate = true;
+                }
+            }
+            else{
+                this.animate = false;
+            }
+            });
+    
+        },options);
+
+        this.observer.observe(this.$refs['js-clock']);
+    
+
+
+    
     },
     methods:{
 
@@ -99,6 +124,9 @@ export default{
 
 
     }
+
+
+    
 
 
 
@@ -175,6 +203,7 @@ export default{
   /* border:1px solid rgba(255,0,0,1); */
   /* background-blend-mode: hard-light; */
   border-radius:1em;
+  transform:translate3d(0,0,1);
   /* mix-blend-mode: screen; */
   
   /* mix-blend-mode: screen; */
@@ -553,8 +582,8 @@ export default{
   /* height:60vh; */
   transition:all .75s;
 
-  /* stroke-dasharray: var(--story-border-length) var(--story-border-space); */
-  /* stroke-dashoffset: var(--story-border-offset); */
+  stroke-dasharray: var(--story-border-length) var(--story-border-space); 
+  stroke-dashoffset: var(--story-border-offset);
   /* transform: translate(-5px, -5px); */
   
   stroke-width: var(--story-border-sw);
@@ -577,6 +606,9 @@ export default{
 
   grid-row: 1 / 9;
   opacity:.2;
+
+   stroke-dasharray: none;
+  stroke-dashoffset: none;
 }
 .homepage-intro-story-border.-mod2{
   /* transform:translate(0, 0); */

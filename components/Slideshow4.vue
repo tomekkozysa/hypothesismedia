@@ -101,12 +101,10 @@ export default{
             if(entry.isIntersecting){
                 if(entry.intersectionRatio > .5){
                     this.animate = true;
-                    console.log('in',entry);
                 }
             }
             else{
                 this.animate = false;
-                console.log('out',entry);
             }
             });
     
