@@ -1,6 +1,6 @@
 <template>
     
-     <div class="homepage-intro-story st1" ref="js-clock">
+     <div class="homepage-intro-story st1 js-clock" ref="js-clock">
     
     <div class="homepage-intro-story-copy -ic1">
         <h3 class="homepage-intro-story-headline -ic1">
@@ -71,19 +71,54 @@ export default{
       intervalTime:4000,
       intervalArray:['st1','st2','st3'],
       currentIndex:0,
+      animate : false,
     }
   },
     mounted(){
         this.clockInterval = setInterval(()=>{
 
+            if(!this.animate){
+                return;
+            }
+
           this.updateClock();
 
     },this.intervalTime)
+
+
+
+
+
+
+    
+
+        let options = {
+            rootMargin: '0px',
+            threshold: [0,.1,.2,.3,.4,.5,.6,.7,.8,.9,1]
+        }
+        this.observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {    
+            if(entry.isIntersecting){
+                if(entry.intersectionRatio > .5){
+                    this.animate = true;
+                    console.log('in',entry);
+                }
+            }
+            else{
+                this.animate = false;
+                console.log('out',entry);
+            }
+            });
+    
+        },options);
+
+        this.observer.observe(this.$refs['js-clock']);
+    
     },
     methods:{
 
         updateClock(){
-      
+            
       let current = this.currentIndex+1 > 2 ? 0 :  this.currentIndex+1;
 
       let c = this.$refs['js-clock'];
@@ -438,7 +473,11 @@ export default{
   transform:translate(0px, 40px);
   transition:all .75s;
 
+
+    stroke-dasharray: var(--story-border-length) var(--story-border-space);
+  stroke-dashoffset: var(--story-border-offset);
   
+
   stroke-width: var(--story-border-sw);
   stroke:pink;
   opacity:.5;
@@ -459,6 +498,7 @@ export default{
     opacity:.2;
     stroke-dasharray:none;
     stroke-dashoffset: none;
+    display:none;
 }
 .homepage-intro-story-border.-mod2{
     stroke:white;
@@ -498,7 +538,10 @@ export default{
     width:100%;
     height:100%;
     
+    /* display:none; */
 }
+
+
 
 
 </style>
