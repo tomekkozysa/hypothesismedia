@@ -55,7 +55,7 @@ export default{
         --c-light:white;
         position: absolute;    
         top:0;
-        right:20px;
+        right:0px;
        
     }
 
