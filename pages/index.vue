@@ -37,14 +37,6 @@ Working with best of breed industry partners to streamline, innovate and deliver
 </section>
 
  
-<!-- 
-<section id="what-we-do" class="homepage-story-slide js-observed slide-snap">
-    <h3 class="homepage-story-slide-headline">What we do</h3>
-<WhatWeDo2 />
-</section> -->
-
-
-
   
   <section id="case-studies" class="homepage-story-slide js-observed slide-snap">
     <h3 class="homepage-story-slide-headline">Case Studies</h3>
@@ -64,8 +56,10 @@ Working with best of breed industry partners to streamline, innovate and deliver
 
 
 
-
-
+<section id="what-we-do" class="homepage-story-slide js-observed slide-snap">
+    <h3 class="homepage-story-slide-headline">What we do</h3>
+<WhatWeDo2 />
+</section>
 
   
 
