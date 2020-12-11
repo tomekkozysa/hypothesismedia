@@ -64,7 +64,7 @@
 <script>
 export default{
 
-    name:'Slideshow4',
+    name:'Slideshow6',
     data(){
     return{
       clockInterval:0,
@@ -154,10 +154,11 @@ export default{
   border-radius:1em;
 
   width:100%;
+  max-width: 1100px;
   margin:0 auto;
 
   --text-opacity-off:0;
-  --text-opacity-on: .9;
+  --text-opacity-on: .95;
 
   --text-transdur-in: 1.75s;
   --text-transdur-out: .5s;
@@ -167,7 +168,7 @@ export default{
   --text-trans-in:translateY(-.75em); 
 
   --image-opacity-off:0;
-  --image-opacity-on: .7;
+  --image-opacity-on: .9;
   
   --blur-opacity-off:0;
   --blur-opacity-on: .5;
@@ -390,21 +391,22 @@ export default{
 
 
 .homepage-intro-story-img.-ic1{
-    grid-column: 2 / 11;
-    grid-row: 2 / 8;
+    grid-column: 1 / 13;
+    grid-row: 1 / 9;
     /* max-height:90%; */
     align-self: center;
 }
 .homepage-intro-story-img.-ic2{
-    grid-column: 4 / 12;
+    grid-column: 1 / 13;
+    grid-row: 1 / 9;
     /* max-width:90%; */
     justify-self: center;
-    grid-row: 2/8;
     align-self: end;
 }
 .homepage-intro-story-img.-ic3{
-    grid-column: 4 / 12;
-    grid-row: 2/8;
+    grid-column: 1 / 13;
+    grid-row: 1 / 9;
+    
     align-self: end;
 }
 
@@ -483,7 +485,7 @@ export default{
   opacity:.5;
   
   grid-column: 2 / 12;
-  grid-row: 1 / 9;
+  grid-row: 2 / 8;
 
   border-radius:1.1em;
 

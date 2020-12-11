@@ -168,13 +168,21 @@ images.forEach(image => {
   --fs-cs-headline:4.2rem;
   --fs-cs-blurb: 1.8rem;
   --fs-cs-data: 2.4rem;
+  
+  --fs-cs-headline:5.6rem;
+  --fs-cs-blurb: 2.8rem;
   --fs-cs-data: 2.4rem;
+  
+  
+  --fs-cs-single-data:5.6rem;
+
 
   --l-max-w:1400px;
   --u-logo-width:140px; 
 
   --u-nav-icon-size:30px;
-
+  --u-border-radius:20px;
+   --u-column-padding: 40px;
 
     
   /* --story-border-total-length:3125px; */
@@ -228,16 +236,21 @@ html { /* body won't work ¯\_(ツ)_/¯ */
 body{ 
   
   font-family:'Helvetica Neue', Arial, sans-serif;
+  /* font-size:16px; */
+  /* font-size:1.6rem; */
+  /* font-size:var(--fs-body); */
+  
   padding:0;
   margin:0;
   background:var(--c-dark);
+  color:var(--c-body);
+  
   /* text-shadow: var(--c-light) 1px 1px 0; */
 
   /* background:var(--c-dark) var(--cg-main) no-repeat 0; */
   /* background:url(/img/tmp3.gif); */
   background-attachment:fixed;
   background-size:100vw 100vh;
-  color:var(--c-body);
    
 }
 
@@ -247,6 +260,15 @@ body{
   box-sizing: border-box;
   margin: 0;
 }
+
+
+
+.slide-snap{
+    scroll-snap-align: start;
+    
+}
+
+
 
 .main{
   padding:0 80px;

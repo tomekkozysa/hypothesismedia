@@ -8,10 +8,11 @@
 
 
 
+          <NuxtLink class="case-study-teaser-link" to="/case-studies/the-brit-awards">
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
-              <img src="/case-studies/thebritawards.png" class="case-study-teaser-img">
+              <img src="/img/v2/brit_awards.jpg" class="case-study-teaser-img">
               </div>
                <svg class="faux-border" width="640" height="480" >
                 <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
@@ -24,11 +25,15 @@
           </div>
         </div>
 
+              </NuxtLink>
 
+
+
+<NuxtLink class="case-study-teaser-link" to="/case-studies/the-million-pound-drop">
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
-              <img src="/case-studies/themillionpounddrop.png" class="case-study-teaser-img">
+              <img src="/img/v2/million_pound_drop.jpg" class="case-study-teaser-img">
               </div>
               <svg class="faux-border" width="640" height="480" >
                 <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
@@ -41,10 +46,13 @@
           <p class="case-study-data"> 12.5% of all live TV audience played along </p>
           </div>
         </div>
+
+</NuxtLink>
+<NuxtLink class="case-study-teaser-link" to="/case-studies/crufts">
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
-              <img src="/case-studies/crufts.png" class="case-study-teaser-img">
+              <img src="/img/v2/crufts.jpg" class="case-study-teaser-img">
               </div>
               <svg class="faux-border" width="640" height="480" >
                 <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
@@ -57,6 +65,8 @@
           <p class="case-study-data">Most socially engaged show across whole of Channel 4 each consecutive year in March</p>
           </div>
         </div>
+</NuxtLink>
+<NuxtLink class="case-study-teaser-link" to="/case-studies/the-voice">
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
@@ -70,10 +80,12 @@
           <p class="case-study-data">Global first live social mosaic on TV</p>
           </div>
         </div>
+</NuxtLink>
+<NuxtLink class="case-study-teaser-link" to="/case-studies/ed-sheeran-dynamic-ad">
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
-              <img src="/case-studies/edsheeran.png" class="case-study-teaser-img">
+              <img src="/img/v2/ed_sheeran_dynamic_ad.jpg" class="case-study-teaser-img">
               </div>
             </div>
             <div class="case-study-teaser-caption" >
@@ -83,10 +95,12 @@
           <p class="case-study-data">5% of all UK TV viewing public watching </p>
           </div>
         </div>
+</NuxtLink>
+<NuxtLink class="case-study-teaser-link" to="/case-studies/years-and-years">
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
-              <img src="/case-studies/yearsandyears.png" class="case-study-teaser-img">
+              <img src="/img/v2/years_years.jpg" class="case-study-teaser-img">
               </div>
             </div>
             <div class="case-study-teaser-caption" >
@@ -96,7 +110,7 @@
           <p class="case-study-data">More viewers watching this ad than the TV show around it, 14,000 tweets received in 4 minutes</p>
           </div>
         </div>
-
+</NuxtLink>
 
 
     </div>
@@ -115,16 +129,21 @@ export default{
 <style>
 
 .case-study-teaser{
-   padding:4em 0;
+   padding:1em 0;
+   margin:4em 0;
    scroll-snap-align: start;
    /* margin:5em 0; */
    display:flex;
    min-height: 30vh;
     display: flex;
     align-items: center; 
+    cursor:pointer;
     
 }
-
+.case-study-teaser-link{
+  text-decoration:none;
+  color:inherit;
+}
 .case-study-teaser-caption{
     position: relative;
 }
@@ -146,24 +165,24 @@ export default{
 
 
 
-.case-study-teaser:nth-child(odd){
+.case-study-teaser-link:nth-child(odd) .case-study-teaser{
     flex-direction: row-reverse;
 }
 
 
 .case-study-headline{
   font-size:var(--fs-cs-headline);
-  font-weight:700;
-
-  letter-spacing:-.02em;
+  font-weight:500;
+  line-height: 1;
+  letter-spacing:-.03em;
   margin:0;
   padding:0;
 }
 .case-study-blurb{
   font-size:var(--fs-cs-blurb);
-  font-weight:700;
+  font-weight:500;
   letter-spacing:-.02em;
-  margin:0;
+  margin:.5em 0 0;
   padding:0;
 }
 .case-study-data{
@@ -186,9 +205,10 @@ export default{
   padding:0 0 0 2em;
   width:50%;
   align-self: center;
+  transition:all .75s;
 }
 
-.case-study-teaser:nth-child(odd) .case-study-teaser-caption{
+.case-study-teaser-link:nth-child(odd) .case-study-teaser-caption{
   padding:0 2em 0 0;
 
 }
@@ -211,12 +231,14 @@ pointer-events: none;
 
 }
 
-.case-study-teaser:nth-child(even) .faux-border{
+.case-study-teaser-link:nth-child(even) .faux-border{
     
     stroke-dashoffset: -200%;
 }
 
-.case-study-teaser-media:hover .faux-border{
+
+
+.case-study-teaser-link:hover .faux-border{
      stroke-dasharray: 300% 0%;
       stroke-dashoffset: -250%;
       transform: translate(-5px, 5px);
@@ -232,8 +254,18 @@ pointer-events: none;
   transition:all .75s;
 
 }
+.case-study-teaser-link:hover .case-study-teaser-caption{
+transform: translate(5px, 0);  
+}
 
-.case-study-teaser-media:hover{
+.case-study-teaser-link:nth-child(even):hover .case-study-teaser-caption{
+transform: translate(-5px, 0);  
+}
+.case-study-teaser-link:nth-child(even):hover .case-study-teaser-media{
+transform: translate(5px, 0);  
+}
+
+.case-study-teaser-link:hover .case-study-teaser-media{
     /* transform: rotate3d(1, 1, 0, 25deg); */
     transform: translate(-5px, 5px);
 }

@@ -8,9 +8,10 @@
 
 
 
-
+<NuxtLink to="/case-studies/the-brit-awards">
 
 <div class="case-study-teaser">
+
             <div class="case-study-teaser-media">
               <img src="/case-studies/thebritawards.png" class="case-study-teaser-img">
             </div>
@@ -19,6 +20,10 @@
           <p class="case-study-blurb"> Live Social Voting </p>
           </div>
         </div>
+</NuxtLink>
+<NuxtChild  />
+
+
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <img src="/case-studies/themillionpounddrop.png" class="case-study-teaser-img">

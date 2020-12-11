@@ -1,85 +1,12 @@
 <template>
-  <article class="homepage-story">
   
-
-  <section id="home" class="homepage-story-slide slide-snap js-observed">
-
-
-    <Slideshow />
-    
-    
-  </section>
-
-
-
-
-<section id="who-we-are" class="homepage-story-slide js-observed slide-snap is_full-size">
-    <h3 class="homepage-story-slide-headline">Who we are</h3>
-    <div class="homepage-story-slide-content who-we-are-copy">
-      We are a niche consultancy specialising in interactive and audience engagement innovation across live broadcast and events.
-
-Experts in viewer engagement and fan interaction. 
-
-Creating and delivering global firsts by fusing editorial content with interactive technologies to bring audiences closer to their favourite shows and events. 
-
-Working with best of breed industry partners to streamline, innovate and deliver breakout interactive engagement concepts that move the live broadcast industry forward.
-    </div>
-    
-    <div class="homepage-story-slide-content">
-      <Grid />
-    </div>
-
-  </section>
-
-<section id="what-we-do" class="homepage-story-slide js-observed slide-snap">
-    <h3 class="homepage-story-slide-headline">What we do</h3>
-<WhatWeDo />
-</section>
-
- 
-<!-- 
-<section id="what-we-do" class="homepage-story-slide js-observed slide-snap">
-    <h3 class="homepage-story-slide-headline">What we do</h3>
-<WhatWeDo2 />
-</section> -->
-
-
-
-  
-  <section id="case-studies" class="homepage-story-slide js-observed slide-snap">
-    <h3 class="homepage-story-slide-headline">Case Studies</h3>
-
-    <!-- <NuxtChild  /> -->
-
-
-    
-    <Cascade  class="homepage-story-slide-content" />   
-  </section>
-
-  <section id="contact" class="homepage-story-slide slide-snap js-observed ">
-    <h3 class="homepage-story-slide-headline">Contact</h3>
-  </section>
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-</article>
-  
+  <nuxt-child />
 </template>
 
 <script>
 import Expander from '~/components/Expander.vue';
 import CascadeTwo from '~/components/CascadeTwo.vue';
-import Slideshow from '~/components/Slideshow4.vue';
+import Slideshow from '~/components/Slideshow5.vue';
 import WhatWeDo from '~/components/WhatWeDo.vue';
 import WhatWeDo2 from '~/components/WhatWeDo2.vue';
 import Grid from '~/components/Grid.vue';
@@ -160,6 +87,10 @@ export default {
 }
 
 
+.slide-snap{
+    scroll-snap-align: start;
+    
+}
 .homepage-story-slide{
 
   width:100%;
@@ -206,6 +137,7 @@ export default {
 /*   transform:translateX(0); */
 /*   opacity:1; */
 }
+
 
 
 
