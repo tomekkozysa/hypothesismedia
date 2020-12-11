@@ -72,6 +72,9 @@
               <div class="case-study-teaser-img-frame">
               <img src="/case-studies/thevoice.png" class="case-study-teaser-img">
               </div>
+               <svg class="faux-border" width="640" height="480" >
+                <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
+                </svg>
             </div>
             <div class="case-study-teaser-caption" >
 
@@ -87,6 +90,9 @@
               <div class="case-study-teaser-img-frame">
               <img src="/img/v2/ed_sheeran_dynamic_ad.jpg" class="case-study-teaser-img">
               </div>
+               <svg class="faux-border" width="640" height="480" >
+                <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
+                </svg>
             </div>
             <div class="case-study-teaser-caption" >
 
@@ -102,6 +108,9 @@
               <div class="case-study-teaser-img-frame">
               <img src="/img/v2/years_years.jpg" class="case-study-teaser-img">
               </div>
+               <svg class="faux-border" width="640" height="480" >
+                <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
+                </svg>
             </div>
             <div class="case-study-teaser-caption" >
 
