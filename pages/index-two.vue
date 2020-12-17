@@ -183,9 +183,12 @@ export default {
   font-weight:500;
   line-height:1.1;
   /* animation: anim_in .75s; */
-  
+  font-family: Anton;
+  text-transform: uppercase;
   z-index:1000000;
 }
+
+
 
 
 
