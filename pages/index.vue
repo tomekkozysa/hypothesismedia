@@ -1,6 +1,6 @@
 <template>
   <article class="homepage-story">
-      <section id="home" class="homepage-story-slide slide-snap js-observed is_active">
+      <section id="home" class="homepage-story-slide js-observed is_active">
         <Slideshow /> 
       </section>
 
@@ -8,7 +8,7 @@
 
 
 
-<section id="who-we-are" class="homepage-story-slide js-observed slide-snap is_full-size">
+<section id="who-we-are" class="homepage-story-slide js-observed is_full-size">
     <h3 class="homepage-story-slide-headline">Who we are</h3>
     <div class="homepage-story-slide-content who-we-are-copy">
       We are a niche consultancy specialising in interactive and audience engagement innovation across live broadcast and events.
@@ -135,7 +135,7 @@ animation-duration: .75s;
 
   width:100%;
   min-height:80vh;
-  padding:var(--u-hss-padding);
+  /* padding:var(--u-hss-padding); */
   
 
 }
