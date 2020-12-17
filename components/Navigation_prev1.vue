@@ -1,65 +1,53 @@
 <template>
     <nav class="navigation" :class="{is_expanded:expanded}" >
+      
           <ul class="navigation-list">
-
-            <!-- <li class="navigation-list-item" :class="{is_current:current == 'home'}" > 
-              <nuxt-link class="navigation-list-link" to="/">  
+            <li class="navigation-list-item" :class="{is_current:current == 'home'}" @click="scrollto($event,'home')"> 
+              <a class="navigation-list-link" href="#home">  
                 <span v-if="current == 'home'" class="navigation-icon is_on">●</span>
                 <span v-else class="navigation-icon is_off">○</span> 
-                <span class="navigation-item-label"> Index </span></nuxt-link>
+                <span class="navigation-item-label"> Home </span></a>
               </li>
-            <li class="navigation-list-item" :class="{is_current:current == 'home'}" > 
-              <nuxt-link class="navigation-list-link" to="/index-two">  
-                <span v-if="current == 'home'" class="navigation-icon is_on">●</span>
-                <span v-else class="navigation-icon is_off">○</span> 
-                <span class="navigation-item-label"> Index II</span></nuxt-link>
-              </li> -->
-
-            <li class="navigation-list-item" :class="{is_current:current == 'home'}" > 
-              <nuxt-link class="navigation-list-link" to="/#home">  
-                <span v-if="current == 'home'" class="navigation-icon is_on">●</span>
-                <span v-else class="navigation-icon is_off">○</span> 
-                <span class="navigation-item-label"> Home </span></nuxt-link>
-              </li>
-
-
             <li class="navigation-list-item" :class="{is_current:current == 'who-we-are'}" >
-              <nuxt-link class="navigation-list-link"  to="/#who-we-are">
+              <a class="navigation-list-link"  @click="scrollto($event,'who-we-are')" href="#who-we-are">
                 <span v-if="current == 'who-we-are'" class="navigation-icon is_on">●</span>
                 <span v-else class="navigation-icon is_off">○</span> 
-                <span class="navigation-item-label"> Who we are </span></nuxt-link></li>
-
-
+                <span class="navigation-item-label"> Who we are </span></a></li>
             <li class="navigation-list-item" :class="{is_current:current == 'what-we-do'}" >
-              <nuxt-link class="navigation-list-link"  to="/#what-we-do">
+              <a class="navigation-list-link"  @click="scrollto($event,'what-we-do')" href="#what-we-do">
                 <span v-if="current == 'what-we-do'" class="navigation-icon is_on">●</span>
                 <span v-else class="navigation-icon is_off">○</span> 
-                <span class="navigation-item-label"> What we do </span></nuxt-link></li>
-
-
+                <span class="navigation-item-label"> What we do </span></a></li>
             <li class="navigation-list-item" :class="{is_current:current == 'case-studies'}" >
-              <nuxt-link class="navigation-list-link"  to="/#case-studies">
+              <a class="navigation-list-link"  @click="scrollto($event,'case-studies')" href="#case-studies">
                 <span v-if="current == 'case-studies'" class="navigation-icon is_on">●</span>
                 <span v-else class="navigation-icon is_off">○</span> 
-                <span class="navigation-item-label"> Case studies </span></nuxt-link></li>
-
-
+                <span class="navigation-item-label"> Case studies </span></a></li>
             <li class="navigation-list-item" :class="{is_current:current == 'contact'}" >
-              <nuxt-link class="navigation-list-link"  to="/#contact">
+              <a class="navigation-list-link"  @click="scrollto($event,'contact')" href="#contact">
                 <span v-if="current == 'contact'" class="navigation-icon is_on">●</span>
                 <span v-else class="navigation-icon is_off">○</span> 
-                <span class="navigation-item-label"> Contact </span></nuxt-link></li>
-
-
+                <span class="navigation-item-label"> Contact </span></a></li>
           </ul>
-          
+          <!-- <ul class="navigation-list">
+            <li class="navigation-list-item">
+              <a class="navigation-list-link" :class={current :current == "home"} @click="scrollto($event,'home')" href="#home">Home </a></li>
+            <li class="navigation-list-item">
+              <a class="navigation-list-link" :class={current :current == "who-we-are"} @click="scrollto($event,'who-we-are')" href="#who-we-are">Who we are </a></li>
+            <li class="navigation-list-item">
+              <a class="navigation-list-link" :class={current :current == "what-we-do"} @click="scrollto($event,'what-we-do')" href="#what-we-do">What we do </a></li>
+            <li class="navigation-list-item">
+              <a class="navigation-list-link" :class={current :current == "case-studies"} @click="scrollto($event,'case-studies')" href="#case-studies">Case studies </a></li>
+            <li class="navigation-list-item">
+              <a class="navigation-list-link" :class={current :current == "contact"} @click="scrollto($event,'contact')" href="#contact">Contact </a></li>
+          </ul> -->
     </nav>
 </template>
 
 <script>
 export default{
 
-    name:'Navigation2',
+    name:'Navigation',
     data(){
       return{}
     },
@@ -71,9 +59,10 @@ export default{
     methods:{
     
      scrollto:function(e,b){
-       
-        e.preventDefault();
-        const offsetTop = document.querySelector('#'+b).offsetTop-120;
+       console.log(e,b)
+      e.preventDefault();
+      // const href = this.getAttribute("href");
+      const offsetTop = document.querySelector('#'+b).offsetTop-120;
  
       scroll({
         top: offsetTop,

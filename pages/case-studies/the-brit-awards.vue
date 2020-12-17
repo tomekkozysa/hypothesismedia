@@ -46,7 +46,7 @@
 
 
 export default {
-   scrollToTop: true,
+  scrollToTop: true,
   components:{
     
 
@@ -87,29 +87,19 @@ export default {
 
 <style scoped>
 
-@keyframes slidein {
-  from { transform: translateY(40px); opacity:0}
-  to   { transform: translateY(0); opacity:1}
-}
-
-
-
-
 :root{
     --fs-cs-single : 7.6rem;
  
 }
-
+.cs-single{
+  padding:var(--u-hss-padding);
+}
 .cs-single-header{
     margin-top:5em;
-    animation-duration: .75s;
-  animation-name: slidein;
 
 }
 .cs-single-content{
     padding:10em 0 30vh;
-    animation-duration: .75s;
-  animation-name: slidein;
 }
 .cs-split{
     display:flex;
@@ -128,15 +118,11 @@ export default {
 }
 .cs-single-video{
     width:100%;
-    animation-duration: .75s;
-  animation-name: slidein;
     /* height:auto; */
     /* height:0; */
     /* height:56.25%; */
 }   
 .cs-single-main-image{
-  animation-duration: .75s;
-  animation-name: slidein;
     max-width: 100%;
     width:100%;
     border-radius:var(--u-border-radius);

@@ -91,6 +91,9 @@ export default {
     --fs-cs-single : 7.6rem;
  
 }
+.cs-single{
+  padding:var(--u-hss-padding);
+}
 
 .cs-single-header{
     margin-top:5em;

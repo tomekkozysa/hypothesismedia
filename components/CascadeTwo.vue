@@ -12,16 +12,16 @@
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
-              <img src="/img/v2/brit_awards.jpg" class="case-study-teaser-img">
+              <img src="/img/v3/brit_awards.jpg" class="case-study-teaser-img">
               </div>
                <svg class="faux-border" width="640" height="480" >
                 <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
                 </svg>
             </div>
             <div class="case-study-teaser-caption" >
-          <h3 class="case-study-headline">The Brit Awards</h3>
-          <p class="case-study-blurb"> Live Social Voting </p>
           <p class="case-study-data">Over 5 million social votes cast, 41,000 tweets per second</p>
+          <p class="case-study-blurb"> Live Social Voting </p>
+          <h3 class="case-study-headline">The Brit Awards</h3>
           </div>
         </div>
 
@@ -33,7 +33,7 @@
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
-              <img src="/img/v2/million_pound_drop.jpg" class="case-study-teaser-img">
+              <img src="/img/v3/million_pound_drop.jpg" class="case-study-teaser-img">
               </div>
               <svg class="faux-border" width="640" height="480" >
                 <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
@@ -41,9 +41,9 @@
             </div>
             <div class="case-study-teaser-caption" >
 
-          <h3 class="case-study-headline">The Million Pound Drop</h3>
-          <p class="case-study-blurb"> Live Audience Play Along</p>
           <p class="case-study-data"> 12.5% of all live TV audience played along </p>
+          <p class="case-study-blurb"> Live Audience Play Along</p>
+          <h3 class="case-study-headline">The Million Pound Drop</h3>
           </div>
         </div>
 
@@ -52,7 +52,7 @@
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
-              <img src="/img/v2/crufts.jpg" class="case-study-teaser-img">
+              <img src="/img/v3/cruftsstudio.jpg" class="case-study-teaser-img">
               </div>
               <svg class="faux-border" width="640" height="480" >
                 <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
@@ -60,9 +60,9 @@
             </div>
             <div class="case-study-teaser-caption" >
 
-          <h3 class="case-study-headline">Crufts</h3>
-          <p class="case-study-blurb"> Live Broadcast Audience Engagement</p>
           <p class="case-study-data">Most socially engaged show across whole of Channel 4 each consecutive year in March</p>
+          <p class="case-study-blurb"> Live Broadcast Audience Engagement</p>
+          <h3 class="case-study-headline">Crufts</h3>
           </div>
         </div>
 </NuxtLink>
@@ -70,7 +70,7 @@
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
-              <img src="/case-studies/thevoice.png" class="case-study-teaser-img">
+              <img src="/img/v3/thevoice.jpg" class="case-study-teaser-img">
               </div>
                <svg class="faux-border" width="640" height="480" >
                 <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
@@ -78,9 +78,9 @@
             </div>
             <div class="case-study-teaser-caption" >
 
-          <h3 class="case-study-headline">The Voice</h3>
-          <p class="case-study-blurb"> Interactive Concept Ideation</p>
           <p class="case-study-data">Global first live social mosaic on TV</p>
+          <p class="case-study-blurb"> Interactive Concept Ideation</p>
+          <h3 class="case-study-headline">The Voice</h3>
           </div>
         </div>
 </NuxtLink>
@@ -88,7 +88,7 @@
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
-              <img src="/img/v2/ed_sheeran_dynamic_ad.jpg" class="case-study-teaser-img">
+              <img src="/img/v3/edsheeranx.jpg" class="case-study-teaser-img">
               </div>
                <svg class="faux-border" width="640" height="480" >
                 <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
@@ -96,9 +96,9 @@
             </div>
             <div class="case-study-teaser-caption" >
 
-          <h3 class="case-study-headline">Ed Sheeran 'X' </h3>
-          <p class="case-study-blurb">Live Dynamic Broadcast Advertising</p>
           <p class="case-study-data">5% of all UK TV viewing public watching </p>
+          <p class="case-study-blurb">Live Dynamic Broadcast Advertising</p>
+          <h3 class="case-study-headline">Ed Sheeran 'X' </h3>
           </div>
         </div>
 </NuxtLink>
@@ -106,7 +106,7 @@
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
-              <img src="/img/v2/years_years.jpg" class="case-study-teaser-img">
+              <img src="/img/v3/years_years.jpg" class="case-study-teaser-img">
               </div>
                <svg class="faux-border" width="640" height="480" >
                 <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
@@ -114,9 +114,9 @@
             </div>
             <div class="case-study-teaser-caption" >
 
-          <h3 class="case-study-headline">Years & Years - 'Shine'</h3>
-          <p class="case-study-blurb"> Live Gamification TV Advert</p>
           <p class="case-study-data">More viewers watching this ad than the TV show around it, 14,000 tweets received in 4 minutes</p>
+          <p class="case-study-blurb"> Live Gamification TV Advert</p>
+          <h3 class="case-study-headline">Years & Years - 'Shine'</h3>
           </div>
         </div>
 </NuxtLink>
@@ -140,7 +140,7 @@ export default{
 .case-study-teaser{
    padding:1em 0;
    margin:4em 0;
-   scroll-snap-align: start;
+   /* scroll-snap-align: start; */
    /* margin:5em 0; */
    display:flex;
    min-height: 30vh;
@@ -196,13 +196,17 @@ export default{
 }
 .case-study-data{
     margin:0;
-  padding:0;
+    padding:0;
     margin-top:1em;
     font-weight:500;
     letter-spacing:-.02em;
+    line-height:1;
     font-style:italic;
-  font-size:var(--fs-cs-data);
-  
+    font-size:var(--fs-cs-data);
+    
+    margin-bottom:.5em;
+    font-style:normal;
+    
 }
 
 
@@ -215,6 +219,7 @@ export default{
   width:50%;
   align-self: center;
   transition:all .75s;
+  will-change: transform;
 }
 
 .case-study-teaser-link:nth-child(odd) .case-study-teaser-caption{
@@ -223,6 +228,7 @@ export default{
 }
 
 .faux-border{
+  /* display:none; */
 position:absolute;
 stroke:pink;
 top:0;
@@ -261,6 +267,7 @@ pointer-events: none;
   
   position: relative;
   transition:all .75s;
+  will-change: transform;
 
 }
 .case-study-teaser-link:hover .case-study-teaser-caption{
@@ -286,7 +293,7 @@ transform: translate(5px, 0);
     align-items: center;
     justify-content: center;
     overflow:hidden;
-    border-radius:.5em;
+    border-radius:var(--u-border-radius);
     
 }
 .case-study-teaser-media:hover .case-study-teaser-img{
@@ -312,7 +319,7 @@ transform: translate(5px, 0);
     overflow:hidden;
   transition: opacity 5s;
   
-  border-radius:.5em;
+  border-radius:var(--u-border-radius);
   
   object-fit: cover;
   mix-blend-mode: screen;

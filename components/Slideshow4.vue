@@ -200,6 +200,7 @@ export default{
     font-weight:500;
     line-height:1;
     transition:all .5s;
+    
 
 }
 

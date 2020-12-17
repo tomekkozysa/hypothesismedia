@@ -1,25 +1,17 @@
 <template>
   <div>
-
-    
-      
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <header class="header-main">
-       <hgroup class="header-main-split">
-          
+      <hgroup class="header-main-split">
         <img src="/hypothesismedia-logo.svg" class="header-logo"  />
-        
-        <NavigationToggle :expanded="navigation_expanded" @click.native="navToggle"
-          class="header-navigation-toggle-button" />
-      
+        <NavigationToggle :expanded="navigation_expanded" @click.native="navToggle" class="header-navigation-toggle-button" />     
       </hgroup>
-
-       
-        
-      
     </header>
-     <Navigation :expanded="navigation_expanded" :current="navigation_position" />
+    
+    <Navigation :expanded="navigation_expanded" :current="navigation_position" />
     <Nuxt class="main" @onSection="onSection" />
+    
     <footer class="slide-snap"></footer>
   </div>
 </template>
@@ -48,8 +40,25 @@ export default{
       }
     },
     mounted(){
+
+      console.log('mounted!',this.$route)
+
+      // if(this.$route.hash !==""){
+      //     this.navigation_position = this.$route.hash.replace("#","");
+
+      //     const offsetTop = document.querySelector(this.$route.hash).offsetTop;
+ 
+      // scroll({
+      //   top: offsetTop,
+      //   behavior: "smooth"
+      // });
+
+
+     // }
    
     const images = document.querySelectorAll('.js-observed');
+
+
     let max = 0;
     let target = null;
     let lastentry = null;
@@ -75,34 +84,16 @@ this.observer = new IntersectionObserver((entries) => {
          this.currententry = entry;
       }
       
-      // if (entry.intersectionRatio  / entry.target.clientHeight >= this.currententry.intersectionRatio / this.currententry.target.clientHeight){
-      //    this.currententry = entry;
-      // }
-
+     
 
 
       target = this.currententry.target.id;
 
+  if(document.querySelector('.is_active'))
+      document.querySelector('.is_active').classList.remove('is_active');
 
-    if(entry.isIntersecting){
-
-
-      
-      // if(lastentry == null){
-      //   lastentry = entry;
-      // }
-  
-      
-      // if (entry.intersectionRatio >= lastentry.intersectionRatio){
-      //    target = entry.target.id;
-      // }
-      // else{
-      //    target = lastentry.target.id;
-      // }
-
-      //  lastentry = entry;
-
-    }
+    document.querySelector('#'+target).classList.add('is_active');
+    
     
     
   });
@@ -136,8 +127,15 @@ images.forEach(image => {
       },
       
       onSection:function(section){
-          if(section){
-            this.navigation_position = section
+
+        
+          if(section && this.$route.name == "index"){
+            this.navigation_position = section;
+            // location.hash = section;
+
+            history.pushState(null, null, '#'+section);
+
+
           }
       }
     }
@@ -153,7 +151,7 @@ images.forEach(image => {
   
   --c-dark:#270949;
   --c-light:#4654A3;
-  --c-body:rgba(255,255,255,.75);
+  --c-body:rgba(255,255,255,.90);
   
   --cg-header:linear-gradient(0deg, rgba(0,0,0,0) 0%, var(--c-dark) 30%, var(--c-dark) 100%);
   --cg-main:linear-gradient(0deg, var(--c-light) 0%, var(--c-dark) 50%);
@@ -173,6 +171,10 @@ images.forEach(image => {
   --fs-cs-blurb: 2.8rem;
   --fs-cs-data: 2.4rem;
   
+  --fs-cs-headline:2.2rem;
+  --fs-cs-blurb: 2.8rem;
+  --fs-cs-data: 4.8rem;
+  
   
   --fs-cs-single-data:5.6rem;
 
@@ -182,7 +184,12 @@ images.forEach(image => {
 
   --u-nav-icon-size:30px;
   --u-border-radius:20px;
-   --u-column-padding: 40px;
+
+  /* cascade colulmn */
+  --u-column-padding: 40px;
+
+
+   --u-hss-padding:15vh 0 20vh;
 
     
   /* --story-border-total-length:3125px; */
@@ -230,7 +237,7 @@ html {
 html { /* body won't work ¯\_(ツ)_/¯ */
   /* scroll-snap-type: y mandatory; */
   scroll-snap-type: y proximity;
-  scroll-padding-top: 200px;
+  /* scroll-padding-top: 200px; */
 }
 
 body{ 

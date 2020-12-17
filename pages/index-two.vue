@@ -1,10 +1,15 @@
 <template>
   <article class="homepage-story">
-      <section id="home" class="homepage-story-slide slide-snap js-observed is_active">
-        <Slideshow /> 
-      </section>
+  
 
-     
+  <section id="home" class="homepage-story-slide slide-snap js-observed">
+
+
+    <Slideshow />
+    
+    
+  </section>
+
 
 
 
@@ -26,16 +31,18 @@ Working with best of breed industry partners to streamline, innovate and deliver
 
   </section>
 
-<section id="what-we-do" class="homepage-story-slide js-observed is_full_size"><!-- slide-snap -->
+<section id="what-we-do" class="homepage-story-slide js-observed slide-snap">
     <h3 class="homepage-story-slide-headline">What we do</h3>
-<WhatWeDo  class="homepage-story-slide-content" />
+<WhatWeDo />
 </section>
 
  
-  <section id="case-studies" class="homepage-story-slide js-observed">
+  
+  <section id="case-studies" class="homepage-story-slide js-observed slide-snap">
     <h3 class="homepage-story-slide-headline">Case Studies</h3>
 
-    
+    <!-- <NuxtChild  /> -->
+
 
     
     <Cascade  class="homepage-story-slide-content" />   
@@ -48,6 +55,11 @@ Working with best of breed industry partners to streamline, innovate and deliver
 
 
 
+
+<section id="what-we-do" class="homepage-story-slide js-observed slide-snap">
+    <h3 class="homepage-story-slide-headline">What we do</h3>
+<WhatWeDo2 />
+</section>
 
   
 
@@ -85,7 +97,28 @@ export default {
 
   
 
-  
+  mounted(){
+   
+//    const images = document.querySelectorAll('.js-observed');
+
+// this.observer = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
+//     if (entry.intersectionRatio > 0) {
+//       // entry.target.classList.add('fancy');
+//       console.log(entry.target.id+'  '+entry.intersectionRatio);
+//       this.shout(entry.target.id);
+//     } else {
+//       entry.target.classList.remove('fancy');
+//     }
+//   });
+// });
+
+// images.forEach(image => {
+//   this.observer.observe(image);
+// });
+
+
+  },
 
   data(){
     return{
@@ -112,17 +145,7 @@ export default {
 </script>
 
 <style scoped>
-/* 
-@keyframes slidein {
-  from { transform: translateY(40px); opacity:0}
-  to   { transform: translateY(0); opacity:1}
-}
 
-
-.is_active .homepage-story-slide-content{
-animation-duration: .75s;
-  animation-name: slidein;
-} */
 
 
 .homepage-story{
@@ -135,8 +158,10 @@ animation-duration: .75s;
 
   width:100%;
   min-height:80vh;
-  padding:var(--u-hss-padding);
-  
+  padding:20vh 0;
+  margin:10vh 0;
+  border:1px solid pink;
+
 
 }
 .homepage-story-slide.is_full-size{
@@ -146,11 +171,15 @@ animation-duration: .75s;
 
 }
 
+.homepage-story-slide.is_active{
+/*     opacity:1; */
+}
+
+
 .homepage-story-slide-headline{
   padding:0;
   margin:10vh 0 0;
-  font-size:var(--fs-headline); 
-  /* letter-spacing:-.04em; */
+  font-size:var(--fs-headline); letter-spacing:-.04em;
   font-weight:500;
   line-height:1.1;
   /* animation: anim_in .75s; */

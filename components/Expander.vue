@@ -1,107 +1,96 @@
 <template>
-    <div ref="zone" class="expander" :class="{is_expanded:is_expanded}" @click="expand">
-        <header>
+    <div ref="zone" class="expander" :class="{is_expanded:is_expanded}">
+        
+        <header :class="{'expander-headline':true,is_expanded:is_expanded}" @click="expand">
             <slot name="header"></slot>
+            <!-- <Close v-if="is_expanded" class="close-button" /> -->
+            
         </header>
-        <div :class="{ex_content:true, is_expanded:is_expanded}">
+         
+        <div :class="{'expander-content':true, is_expanded:is_expanded}">
             <slot></slot>
-            <!-- <div class="expander-split">
-            <div class="expander-image">
-                <slot name="image"></slot>
-            </div>
-            <div class="expander-copy">
-                <slot name="copy"></slot>
-            </div> -->
         </div>
-          
-        
-   </div>
-  
-
-
-          
-      
-
-        
-
-       
     </div>
-
-
 </template>
 <script>
+import Close from '~/components/Close.vue';
 export default{
     name:'Expander',
     data(){
         return{
             is_expanded:false,           
         }
-        
     },
-    mounted(){
-    //    let z = this.$refs['zone'];
-
-    //    z.addEventListener('click',this.expand);
-       
-    },
-
     methods:{
-       
-       expand:function(e){
+        __expand:function(e){
             let z = this.$refs['zone'];
-            z.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-  
-  setTimeout(()=>{
-          this.is_expanded = !this.is_expanded;
-  },250)
-        
-       }
-        
+            if(!this.is_expanded){
+                z.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+            }
+            setTimeout(()=>{
+                this.is_expanded = !this.is_expanded;
+            },250)
+        },
+        expand:function(e){
+            let z = this.$refs['zone'];
+            const offsetTop = z.offsetTop;
+            scroll({
+                top: offsetTop,
+                behavior: "smooth"
+            });
+            setTimeout(()=>{
+                this.is_expanded = !this.is_expanded;
+            },250);            
+        }        
     }
-
 }
 </script>
 <style >
 
 :root{
-    --u-expander-height:60vh;
-}
-.border{
-    border:1px solid pink;
+    --u-expander-height:160vh;
+    --u-expander-headline-padding:10vh 0 0;
+    --u-expander-content-padding:5vh 0;
 }
 
 .expander{
-    /* min-height:1px; */
     cursor:pointer;
-    /* transition:min-height .50s ease-out; */
-    padding:.3em 0;
+        
+        
+}
+.expander-headline{
+    padding:.5em 0;
+    transition:all .5s;
+    position: relative;
+}
+.expander-headline:not(.is_expanded):hover{
     
+    transform:translateX(10px);
+    /* background:rgba(255,255,255,0.1); */
 }
-
-.expander.is_expanded{
-    /* min-height:80vh;   */
-   /* background: var(--c-light); */
+.close-button{
+    position: absolute;
+    top:0;right:0;
+    padding:var(--u-expander-headline-padding);
 }
-.ex_content{
-    margin-top:0;
-    min-height:0px;
+.expander-content{
+    padding:0 0;
     max-height:0px;
     overflow:hidden;
-    /* background:var(--c-light); */
-    /* opacity:.5; */
-    
-    transition:min-height .5s, margin-top .25s ease-in-out .26s;
+    will-change: max-height;
+    transition:all .5s;
 }
-.ex_content.is_expanded{
-    min-height:var(--u-expander-height);
-    margin-top:1em;
-    transition:min-height .5s, margin-top .25s;
+.expander-headline.is_expanded{
+    padding:var(--u-expander-headline-padding);
+}
+
+.expander-content.is_expanded{
+    max-height:var(--u-expander-height);
+    padding:var(--u-expander-content-padding);
+    transition:all .5s;
      
 }
-@keyframes wow {
-  0%   { background-position: 0px 50%; }
-  50% { background-position: 0px 100%; }
-100%   { background-position: 0px 50%; }
-}
+
+
 
 </style>
