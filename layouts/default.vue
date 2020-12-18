@@ -4,7 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <header class="header-main">
       <hgroup class="header-main-split">
-        <img src="/hypothesismedia-logo.svg" class="header-logo"  />
+        <nuxt-link to="/#home"><img src="/hypothesismedia-logo.svg" class="header-logo"  /></nuxt-link>
         <NavigationToggle :expanded="navigation_expanded" @click.native="navToggle" class="header-navigation-toggle-button" />     
       </hgroup>
     </header>
@@ -36,87 +36,122 @@ export default{
         navigation_position:'home',
         currententry:null,
         pre:null,
+        observed:[],
+        observers:[],
         
       }
     },
     mounted(){
 
-      console.log('mounted!',this.$route)
-
-      // if(this.$route.hash !==""){
-      //     this.navigation_position = this.$route.hash.replace("#","");
-
-      //     const offsetTop = document.querySelector(this.$route.hash).offsetTop;
- 
-      // scroll({
-      //   top: offsetTop,
-      //   behavior: "smooth"
-      // });
-
-
-     // }
    
-    const images = document.querySelectorAll('.js-observed');
+      const slides = document.querySelectorAll('.js-observed');
+      console.log('slides? •*•', slides)
+
+      let max = 0;
+      let target = null;
+      let lastentry = null;
+
+      let observed = {};
+
+      let options = {
+        rootMargin: '0px',
+        root: null,
+        threshold: this.generateThresholds(100),
+        // threshold: [...Array(30).keys()].map(x => x / 29),
+        // threshold: [0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1]
+      }
+
+    
+      // this.observer = new IntersectionObserver((entries) => {
+      //   entries.forEach(entry => {
+      //     this.pre = 'entry :' + entry.target.id + ' | ' + entry.intersectionRatio;
+      //     let id=entry.target.id;
+          
 
 
-    let max = 0;
-    let target = null;
-    let lastentry = null;
-    // let currententry = null;
-
-    let options = {
-  // root: document.querySelector('#scrollArea'),
-  rootMargin: '0px',
-    // threshold: [0,.1,.2,.3,.4,.5,.6,.7,.8,.9,1]
-    threshold: this.generateThresholds(100),
-}
-
-this.observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-
-    this.pre = 'entry :' + entry.target.id + ' | ' + entry.intersectionRatio;
+      //     if(!this.currententry){
+      //       this.currententry = entry;
+      //     }
+      //     if(entry.intersectionRatio > .2 || entry.target.id == this.currententry.target.id){
+      //       this.currententry = entry;
+      //     }
+      //     target = this.currententry.target.id;
+      //     if(document.querySelector('.is_active')){
+      //       document.querySelector('.is_active').classList.remove('is_active'); 
+      //     }
+      //     document.querySelector('#'+target).classList.add('is_active');  
+      //   });
 
 
-    if(!this.currententry){
-           this.currententry = entry;
-    }
-    if(entry.intersectionRatio > .2 || entry.target.id == this.currententry.target.id){
-         this.currententry = entry;
+      // this.onSection(target);
+      // },options);
+      
+      let intersectionCallback = (entries) => {
+
+        // console.log('🖐 🖐 🖐', entries);
+        entries.forEach(entry => {
+          
+          let id=entry.target.id;        
+            
+            let intersection=entry.intersectionRatio;    
+            // let pixels = entry.target.scrollHeight * intersection;
+            let pixels = entry.intersectionRect.height;
+            // console.log('👉', id,pixels,entry.intersectionRect);
+            this.updateObserved(id,pixels,entry);        
+           if(entry.isIntersecting){}
+          else{
+            // this.updateObserved(id,0,entry);        
+          }
+          
+
+        });
+
       }
       
-     
-
-
-      target = this.currententry.target.id;
-
-  if(document.querySelector('.is_active'))
-      document.querySelector('.is_active').classList.remove('is_active');
-
-    document.querySelector('#'+target).classList.add('is_active');
-    
-    
-    
-  });
-  this.onSection(target);
-},options);
-
-images.forEach(image => {
-  this.observer.observe(image);
-});
+      slides.forEach((slide,i) => {
+        
+        console.log(slide);
+        this.observers[i] = new IntersectionObserver(intersectionCallback,options);     
+        this.observers[i].observe(slide);
+      });
 
 
   },
 
     methods:{
+      updateObserved(id,intersectionRatio,entry){
+        
+        this.observed[id]={intersectionRatio:intersectionRatio, entry:entry};
 
+        var sortable = [];
+        for (var entry in this.observed) {
+            // console.log('entry:', entry, this.observed[entry].intersectionRatio);
+            sortable.push([entry, this.observed[entry].intersectionRatio]);
+        }
+
+        sortable.sort(function(a, b) {
+            return a[1] - b[1];
+        });
+        sortable = sortable.reverse();
+
+
+        // console.log('sortable',sortable);
+        // console.log('sortable',sortable[0][0]);
+
+         this.onSection(sortable[0][0]);
+
+
+      },
       generateThresholds:function(max){
 
         let t = [];
-        for(var i=0; i< max; i++){
+        for(var i=0; i<= max; i++){
           
           t.push(i/max);
 
         }
+
+        console.log('thresholds generated', t);
         return t;
 
       },
@@ -189,7 +224,7 @@ images.forEach(image => {
   --u-column-padding: 40px;
 
 
-   --u-hss-padding:15vh 0 20vh;
+   --u-hss-padding:15vh 0;
 
     
   /* --story-border-total-length:3125px; */
@@ -232,14 +267,17 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-}
 
-html { /* body won't work ¯\_(ツ)_/¯ */
+  text-rendering: optimizeSpeed;
+  /* text-rendering: optimizeLegibility; */
+   /* body won't work ¯\_(ツ)_/¯ */
   /* scroll-snap-type: y mandatory; */
   scroll-snap-type: y proximity;
   /* scroll-padding-top: 200px; */
 }
-
+svg{
+  /* shape-rendering: optimizeSpeed; */
+}
 body{ 
   
   font-family:'Helvetica Neue', Arial, sans-serif;
@@ -271,7 +309,7 @@ body{
 
 
 .slide-snap{
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
     
 }
 

@@ -1,14 +1,30 @@
 <template>
   <article class="homepage-story">
-      <section id="home" class="homepage-story-slide js-observed is_active">
-        <Slideshow /> 
-      </section>
+    
+    <section id="home" class="homepage-story-slide homepage-story-carousel js-observed is_active">
+        <!-- <Slideshow />  -->
+
+        
+
+        <video class="homepage-story-video" 
+        controls muted autoplay width="100%" height="auto">
+
+
+    <source src="https://res.cloudinary.com/fifteennine/video/upload/v1608292985/_/hm/HYPOTHESIS_MEDIA_ROUGH_CUT_002.mp4"
+            type="video/mp4">
+
+        </video>
+    </section>
+      
+      
+      
+      
 
      
 
 
 
-<section id="who-we-are" class="homepage-story-slide js-observed is_full-size">
+<section id="who-we-are" class="homepage-story-slide js-observed scroll-snap">
     <h3 class="homepage-story-slide-headline">Who we are</h3>
     <div class="homepage-story-slide-content who-we-are-copy">
       We are a niche consultancy specialising in interactive and audience engagement innovation across live broadcast and events.
@@ -26,7 +42,7 @@ Working with best of breed industry partners to streamline, innovate and deliver
 
   </section>
 
-<section id="what-we-do" class="homepage-story-slide js-observed is_full_size"><!-- slide-snap -->
+<section id="what-we-do" class="homepage-story-slide js-observed is_full_size scroll-snap"><!-- slide-snap -->
     <h3 class="homepage-story-slide-headline">What we do</h3>
 <WhatWeDo  class="homepage-story-slide-content" />
 </section>
@@ -130,14 +146,35 @@ animation-duration: .75s;
     max-width: var(--l-max-w);
 }
 
-
+.homepage-story-video{
+  background:var(--c-dark);
+  outline:none;
+}
+/*
+.homepage-story-slide:nth-child(odd){
+  border:1px solid yellow;
+  }
+.homepage-story-slide:nth-child(even){
+  border:1px solid red;
+  }
+*/
+  
 .homepage-story-slide{
 
   width:100%;
   min-height:80vh;
   /* padding:var(--u-hss-padding); */
+  /* margin-top:-20vh; */
   
+  /* opacity: 0; */
 
+}
+.homepage-story-carousel{
+  margin-top:0;
+  min-height:100vh;
+  scroll-snap-align: start;
+  display:flex;
+  align-items: center;
 }
 .homepage-story-slide.is_full-size{
 

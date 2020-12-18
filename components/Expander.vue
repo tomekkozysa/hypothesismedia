@@ -3,10 +3,7 @@
         
         <header :class="{'expander-headline':true,is_expanded:is_expanded}" @click="expand">
             <slot name="header"></slot>
-            <!-- <Close v-if="is_expanded" class="close-button" /> -->
-            
         </header>
-         
         <div :class="{'expander-content':true, is_expanded:is_expanded}">
             <slot></slot>
         </div>
