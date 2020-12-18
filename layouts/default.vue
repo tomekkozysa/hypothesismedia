@@ -4,7 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <header class="header-main">
       <hgroup class="header-main-split">
-        <nuxt-link to="/"><img src="/hypothesismedia-logo.svg" class="header-logo"  /></nuxt-link>
+        <a href="/#home"><img src="/hypothesismedia-logo.svg" class="header-logo"  /></a>
         <NavigationToggle :expanded="navigation_expanded" @click.native="navToggle" class="header-navigation-toggle-button" />     
       </hgroup>
     </header>

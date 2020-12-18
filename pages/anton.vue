@@ -1,30 +1,19 @@
 <template>
   <article class="homepage-story">
+  
+
+  <section id="home" class="homepage-story-slide slide-snap js-observed">
+
+
+    <Slideshow />
     
-    <section id="home" class="homepage-story-slide homepage-story-carousel js-observed is_active">
-        <!-- <Slideshow />  -->
-
-        
-
-        <video class="homepage-story-video" 
-        controls muted autoplay width="100%" height="auto">
-
-
-    <source src="https://res.cloudinary.com/fifteennine/video/upload/v1608292985/_/hm/HYPOTHESIS_MEDIA_ROUGH_CUT_002.mp4"
-            type="video/mp4">
-
-        </video>
-    </section>
-      
-      
-      
-      
-
-     
+    
+  </section>
 
 
 
-<section id="who-we-are" class="homepage-story-slide js-observed scroll-snap">
+
+<section id="who-we-are" class="homepage-story-slide js-observed slide-snap is_full-size">
     <h3 class="homepage-story-slide-headline">Who we are</h3>
     <div class="homepage-story-slide-content who-we-are-copy">
       We are a niche consultancy specialising in interactive and audience engagement innovation across live broadcast and events.
@@ -42,16 +31,18 @@ Working with best of breed industry partners to streamline, innovate and deliver
 
   </section>
 
-<section id="what-we-do" class="homepage-story-slide js-observed is_full_size scroll-snap"><!-- slide-snap -->
+<section id="what-we-do" class="homepage-story-slide js-observed slide-snap">
     <h3 class="homepage-story-slide-headline">What we do</h3>
-<WhatWeDo  class="homepage-story-slide-content" />
+<WhatWeDo />
 </section>
 
  
-  <section id="case-studies" class="homepage-story-slide js-observed">
+  
+  <section id="case-studies" class="homepage-story-slide js-observed slide-snap">
     <h3 class="homepage-story-slide-headline">Case Studies</h3>
 
-    
+    <!-- <NuxtChild  /> -->
+
 
     
     <Cascade  class="homepage-story-slide-content" />   
@@ -64,6 +55,11 @@ Working with best of breed industry partners to streamline, innovate and deliver
 
 
 
+
+<section id="what-we-do" class="homepage-story-slide js-observed slide-snap">
+    <h3 class="homepage-story-slide-headline">What we do</h3>
+<WhatWeDo2 />
+</section>
 
   
 
@@ -101,7 +97,28 @@ export default {
 
   
 
-  
+  mounted(){
+   
+//    const images = document.querySelectorAll('.js-observed');
+
+// this.observer = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
+//     if (entry.intersectionRatio > 0) {
+//       // entry.target.classList.add('fancy');
+//       console.log(entry.target.id+'  '+entry.intersectionRatio);
+//       this.shout(entry.target.id);
+//     } else {
+//       entry.target.classList.remove('fancy');
+//     }
+//   });
+// });
+
+// images.forEach(image => {
+//   this.observer.observe(image);
+// });
+
+
+  },
 
   data(){
     return{
@@ -127,55 +144,23 @@ export default {
 
 </script>
 
-<style scoped>
-/* 
-@keyframes slidein {
-  from { transform: translateY(40px); opacity:0}
-  to   { transform: translateY(0); opacity:1}
-}
+<style>
 
-
-.is_active .homepage-story-slide-content{
-animation-duration: .75s;
-  animation-name: slidein;
-} */
 
 
 .homepage-story{
     box-sizing:border-box;
-    
+    max-width: var(--l-max-w);
 }
 
-.homepage-story-video{
-  background:var(--c-dark);
-  outline:none;
-}
-/*
-.homepage-story-slide:nth-child(odd){
-  border:1px solid yellow;
-  }
-.homepage-story-slide:nth-child(even){
-  border:1px solid red;
-  }
-*/
-  
+
 .homepage-story-slide{
 
   width:100%;
   min-height:80vh;
-  max-width: var(--l-max-w);
-  /* padding:var(--u-hss-padding); */
-  /* margin-top:-20vh; */
-  
-  /* opacity: 0; */
+  padding:20vh 0;
+  margin:10vh 0;
 
-}
-.homepage-story-carousel{
-  margin-top:0;
-  min-height:100vh;
-  scroll-snap-align: start;
-  display:flex;
-  align-items: center;
 }
 .homepage-story-slide.is_full-size{
 
@@ -184,16 +169,27 @@ animation-duration: .75s;
 
 }
 
+.homepage-story-slide.is_active{
+/*     opacity:1; */
+}
+
+
 .homepage-story-slide-headline{
   padding:0;
   margin:10vh 0 0;
-  font-size:var(--fs-headline); 
-  /* letter-spacing:-.04em; */
+  font-size:var(--fs-headline); letter-spacing:-.04em;
   font-weight:500;
   line-height:1.1;
   /* animation: anim_in .75s; */
-  
+  font-family: Anton;
+  text-transform: uppercase;
   z-index:1000000;
+}
+
+
+.homepage-intro-story-headline{
+    font-family: Anton;
+    text-transform:uppercase;
 }
 
 
