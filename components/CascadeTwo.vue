@@ -184,14 +184,14 @@ export default{
   font-weight:500;
   line-height: 1;
   letter-spacing:-.03em;
-  margin:0;
+  margin:.25em 0 0;
   padding:0;
 }
 .case-study-blurb{
   font-size:var(--fs-cs-blurb);
   font-weight:500;
   letter-spacing:-.02em;
-  margin:.5em 0 0;
+  margin:1em 0 0;
   padding:0;
 }
 .case-study-data{
