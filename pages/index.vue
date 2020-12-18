@@ -143,6 +143,7 @@ animation-duration: .75s;
 
 .homepage-story{
     box-sizing:border-box;
+    max-width: var(--l-max-w);
     
 }
 
@@ -163,9 +164,10 @@ animation-duration: .75s;
 
   width:100%;
   min-height:80vh;
-  max-width: var(--l-max-w);
+  
   /* padding:var(--u-hss-padding); */
-  /* margin-top:-20vh; */
+  margin-top:-10vh;
+  padding:10vh 0;
   
   /* opacity: 0; */
 
