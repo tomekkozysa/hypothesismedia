@@ -5,16 +5,14 @@
       <header class="header-main">
        <hgroup class="header-main-split">
           
-        <img src="/hypothesismedia-logo.svg" class="header-logo"  />
+        <nuxt-link to="/"><img src="/hypothesismedia-logo.svg" class="header-logo"  /></nuxt-link>
         
         <NavigationToggle :expanded="navigation_expanded" @click.native="navToggle"
           class="header-navigation-toggle-button" />
       
       </hgroup>
 
-       
-        CASE STUDIES
-      
+            
     </header>
      <Navigation :expanded="navigation_expanded" :current="navigation_position" /> 
   
