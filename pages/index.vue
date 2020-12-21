@@ -1,19 +1,12 @@
 <template>
   <article class="homepage-story">
     
-    <section id="home" class="homepage-story-slide homepage-story-carousel js-observed is_active">
+    <section id="home" class=" homepage-story-carousel js-observed is_active">
         <!-- <Slideshow />  -->
-
+        <Video class="video"/>
         
 
-        <video class="homepage-story-video" 
-        controls muted autoplay width="100%" height="auto">
-
-
-    <source src="https://res.cloudinary.com/fifteennine/video/upload/v1608292985/_/hm/HYPOTHESIS_MEDIA_ROUGH_CUT_002.mp4"
-            type="video/mp4">
-
-        </video>
+       
     </section>
       
       
@@ -78,6 +71,7 @@ Working with best of breed industry partners to streamline, innovate and deliver
 import Expander from '~/components/Expander.vue';
 import CascadeTwo from '~/components/CascadeTwo.vue';
 import Slideshow from '~/components/Slideshow4.vue';
+import Video from '~/components/Video.vue';
 import WhatWeDo from '~/components/WhatWeDo.vue';
 import WhatWeDo2 from '~/components/WhatWeDo2.vue';
 import Grid from '~/components/Grid.vue';
@@ -143,14 +137,11 @@ animation-duration: .75s;
 
 .homepage-story{
     box-sizing:border-box;
-    max-width: var(--l-max-w);
+    /* max-width: var(--l-max-w); */
     
 }
 
-.homepage-story-video{
-  background:var(--c-dark);
-  outline:none;
-}
+
 /*
 .homepage-story-slide:nth-child(odd){
   border:1px solid yellow;
@@ -168,6 +159,8 @@ animation-duration: .75s;
   /* padding:var(--u-hss-padding); */
   margin-top:-10vh;
   padding:10vh 0;
+  max-width: var(--l-max-w);
+  padding:10vh 80px;
   
   /* opacity: 0; */
 

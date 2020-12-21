@@ -1,7 +1,7 @@
 <template>
   <div>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@350&display=swap" rel="stylesheet">
     <header class="header-main">
       <hgroup class="header-main-split">
         <a href="/#home"><img src="/hypothesismedia-logo.svg" class="header-logo"  /></a>
@@ -316,8 +316,8 @@ body{
 
 
 .main{
-  padding:0 80px;
-  max-width: var(--l-max-w);
+  /* padding:0 80px; */
+  /* max-width: var(--l-max-w); */
   margin: 0 auto;
 }
 
