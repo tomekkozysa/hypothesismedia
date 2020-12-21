@@ -124,7 +124,7 @@ justify-content: center;
   outline:none;
   /* filter:blur(5px); */
   mix-blend-mode: screen;
-  opacity:.25;
+  opacity:.5;
   object-fit:cover;
 
 }
