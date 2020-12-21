@@ -1,11 +1,24 @@
 <template>
   <article class="homepage-story">
     
-    <section id="home" class=" homepage-story-carousel js-observed is_active">
+    <!-- <section id="home" class=" homepage-story-carousel js-observed is_active">
+        
+        <Slideshow /> 
+        
+       
+    </section> -->
+
+    <section id="home" class=" homepage-video-hero js-observed is_active">
+        
         <!-- <Slideshow />  -->
-        <Video class="video"/>
+        <VideoLoop class="videoLoop" v-if="!reel"/>
+        <Showreel v-if="reel" />
         
 
+      <div class="playshowreel"> 
+        <p v-if="!reel" class="playshowreel-button" @click="toggleReel">play showreel</p>
+        <p v-if="reel" class="playshowreel-button" @click="toggleReel">close showreel</p>
+        </div>
        
     </section>
       
@@ -71,7 +84,8 @@ Working with best of breed industry partners to streamline, innovate and deliver
 import Expander from '~/components/Expander.vue';
 import CascadeTwo from '~/components/CascadeTwo.vue';
 import Slideshow from '~/components/Slideshow4.vue';
-import Video from '~/components/Video.vue';
+import VideoLoop from '~/components/VideoLoop.vue';
+import Showreel from '~/components/Showreel.vue';
 import WhatWeDo from '~/components/WhatWeDo.vue';
 import WhatWeDo2 from '~/components/WhatWeDo2.vue';
 import Grid from '~/components/Grid.vue';
@@ -100,6 +114,7 @@ export default {
   data(){
     return{
       observer:null,
+      reel:false,
     }
   },
   methods:{
@@ -107,7 +122,11 @@ export default {
       shout:function(what){
         // alert('argh!'+what)
         this.$emit('onSection'+what)
-      }
+      },
+      toggleReel(){
+        this.reel = !this.reel;
+
+      },
     
   },
 }
@@ -166,12 +185,30 @@ animation-duration: .75s;
 
 }
 .homepage-story-carousel{
+  max-width: var(--l-max-w);
   margin-top:0;
   min-height:100vh;
   scroll-snap-align: start;
   display:flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  z-index:500;
 }
+
+.homepage-video-hero{
+  /* max-width: var(--l-max-w); */
+  margin-top:0;
+  min-height:100vh;
+  scroll-snap-align: start;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index:500;
+}
+
+
 .homepage-story-slide.is_full-size{
 
   min-height:90vh;
@@ -187,7 +224,9 @@ animation-duration: .75s;
   font-weight:500;
   line-height:1.1;
   /* animation: anim_in .75s; */
-  
+  font-family: var(--ff-oswald);
+  text-transform:uppercase;
+  text-align:right;
   z-index:1000000;
 }
 
@@ -264,41 +303,13 @@ TR
 }
 
 
+.playshowreel-button{
+  font-size:2.4rem;
+   cursor:pointer;
 
-/* 
-.homepage-content-list-item:nth-child(odd) .expander-split{
-
-  flex-direction: row-reverse;
+  /* justify-self: flex-end; */
+  /* bottom:0; */
 }
-.homepage-content-list-item:nth-child(odd) .expander-copy{
-
-  padding:0 2em 0 0;
-}
-
-
-.expander-split{
-    display:flex;   
-
-
-}
-.expander-copy{
-    width:50%;
-    font-size: var(--fs-body);
-    padding: 0 0 0 2em;
-}
-.expander-image img{
-    max-width:100%;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-
-
-}
-.expander-image{
-    width:50%;
-    
-}
-*/
 
 
 

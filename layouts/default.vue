@@ -214,6 +214,9 @@ export default{
   --fs-cs-single-data:5.6rem;
 
 
+
+  --ff-oswald:'Oswald', Impact, sans-serif;
+
   --l-max-w:1400px;
   --u-logo-width:140px; 
 
@@ -319,6 +322,10 @@ body{
   /* padding:0 80px; */
   /* max-width: var(--l-max-w); */
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
 }
 
 .header-main-split{
