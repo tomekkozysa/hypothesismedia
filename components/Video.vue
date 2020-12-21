@@ -14,7 +14,7 @@
         </svg>
 
 
-      <video ref="js-video-player" class="video-player" loop muted autoplay>
+      <video ref="js-video-player" class="video-player" controls loop muted autoplay>
         <source :src="src" type="video/mp4">
 
       </video>
