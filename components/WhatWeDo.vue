@@ -114,6 +114,7 @@ export default{
   font-size:var(--fs-list-item);
   letter-spacing: -.02em;
   border-bottom:1px solid rgba(255,255,255,.2);
+  line-height: 1;
   
 }
 .homepage-content-list-item-content:active,
