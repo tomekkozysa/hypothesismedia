@@ -1,172 +1,56 @@
+<script>
+export default {
+  scrollToTop: true,
+  
+  data(){
+    return{
+      observer:null,
+      main_image:'mpd.jpg',
+      vimeo_id:493725927,
+      title:"Million Pound Drop",
+      channel:"Channel 4",
+      blurb:"Live Audience Play Along",
+      stats:"12.5% of all live TV audience played along",
+      text:{},
+    }
+  },  
+}
+</script>
+
 <template>
  
     <section class="cs-single slide-snap">
         <header class="cs-single-header">
-        <h2 class="cs-single-headline">The Brit Awards</h2>
-        <h3 class="cs-single-blurb">Live Social Voting </h3>
+
+          <h2 class="cs-single-headline">{{title}}</h2>
+          <h2 class="cs-single-channel">{{channel}}</h2>
+          <h3 class="cs-single-blurb">{{blurb}} </h3>
         
         </header>
         
         <article class="cs-split cs-single-content">
 
                 <div class="cs-split-column">
+                        
+                        <div style="padding:56.25% 0 0 0;position:relative;">
+                          <iframe :src="'https://player.vimeo.com/video/'+vimeo_id+'?title=0&byline=0&portrait=0'" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                          </div><script src="https://player.vimeo.com/api/player.js"></script>
 
-                        <iframe class="cs-single-video" src="https://player.vimeo.com/video/67550942" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                        <p class="cs-single-data">Over 5 million social votes cast, 41,000 tweets per second </p>
+                        <p class="cs-single-data">{{stats}}</p>
 
                 </div>
                 <div class="cs-split-column">
                     
-                    <img src="/img/one_direction_brits.jpg" class="cs-single-main-image" />
+                    <img :src="'/img/cs/'+main_image" class="cs-single-main-image" />
                     
-
-                        <p class="cs-single-copy">Using our extensive expertise and understanding of live audience behaviours we work to enhance existing shows and titles to increase audience interaction with complementary editorial engagement enhancements. </p>
-                        <p class="cs-single-copy">Introducing new interactive features and mechanics giving live shows and events a unique interactive enhancement angle. </p>
-                        <p class="cs-single-copy">Having worked on new breakout interactive formats across broadcast entertainment, sport, news, music & live events as well as enhancing existing well known titles we are expertly placed to supersize your production with engagement and interactive features that are resonating innovations, not gimmicks. </p>
-
-
+                      <p class="cs-single-copy">Working directly with the live broadcast production team and multiple interactive technical partners we delivered and finessed all live interactive play along elements of Channel 4’s Million Pound Drop helping the show rise to the interactive viewer play along success that it became. </p>
+                      <p class="cs-single-copy">We delivered live executive production management of the online viewers gameplay stories and selecting appropriate social media comments to be shown or mentioned in the live broadcast. </p>
+                      <p class="cs-single-copy">Real time audience engagement was essential to the entertainment factor of this live entertainment show allowing audiences at home to interact with the on screen narrative, with the added pay off that by playing along at home gave audiences the chance of being selected to appear on the show itself as a studio contestant. </p>
 
                 </div>
             
-        </article> 
-
-        <hr class="linebreaker"/>
-
-
-
-
-    </section>
+        </article>
+</section>
   
 </template>
-
-<script>
-
-
-
-
-
-export default {
-   scrollToTop: true,
-  components:{
-    
-
-  
-  },
-
-  
-
-  mounted(){
-
-
-
-  },
-
-  data(){
-    return{
-      observer:null,
-    }
-  },
-  methods:{
-
-      shout:function(what){
-        // alert('argh!'+what)
-        this.$emit('onSection'+what)
-      }
-    
-  },
-}
-
-
-
-
-
-
-
-
-</script>
-
-<style scoped>
-
-:root{
-    --fs-cs-single : 7.6rem;
- 
-}
-.cs-single{
-  padding:var(--u-hss-padding);
-}
-.cs-single-header{
-    margin-top:5em;
-
-}
-.cs-single-content{
-    padding:10em 0 30vh;
-}
-.cs-split{
-    display:flex;
-    flex-direction:row;
-}
-.cs-split-column:first-child{
-    padding-right:var(--u-column-padding);
-}
-.cs-split-column:last-child{
-    padding-left:var(--u-column-padding);
-}
-.cs-split-column{
-    
-    width:50%;
-    flex:1 1;
-}
-.cs-single-video{
-    width:100%;
-    /* height:auto; */
-    /* height:0; */
-    /* height:56.25%; */
-}   
-.cs-single-main-image{
-    max-width: 100%;
-    width:100%;
-    border-radius:var(--u-border-radius);
-
-}
-.cs-single-copy{
-    margin-top:1em;
-    font-size: var(--fs-body);
-}
-.cs-single-headline{
-    
-
-  font-size:var(--fs-headline);
-  font-weight:500;
-
-  letter-spacing:-.02em;
-  margin:0;
-  padding:0;
-
-
-}
-
-
-.cs-single-blurb{
-  font-size:var(--fs-cs-blurb);
-  font-weight:700;
-  letter-spacing:-.02em;
-  margin:0;
-  padding:0;
-}
-.cs-single-data{
-    margin:0;
-  padding:0;
-    margin-top:1em;
-    font-weight:500;
-    letter-spacing:-.02em;
-    line-height:1;
-    font-size:var(--fs-cs-single-data);
-    /* font-style:italic; */
-  /* font-size:var(--fs-cs-data); */
-  
-}
-
-</style>
-
-
 

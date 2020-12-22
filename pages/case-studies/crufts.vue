@@ -1,172 +1,58 @@
+<script>
+export default {
+  scrollToTop: true,
+  
+  data(){
+    return{
+      
+      title:"Crufts",
+      channel:"Channel 4",
+      blurb:"Live Broadcast Audience Engagement ",
+      main_image:'crufts.jpg',
+      vimeo_id:493725971,
+      stats:"Most socially engaged show across whole of Channel 4 each consecutive year in March.",
+      text:{},
+      observer:null,
+    }
+  },  
+}
+</script>
+
 <template>
  
     <section class="cs-single slide-snap">
         <header class="cs-single-header">
-        <h2 class="cs-single-headline">The Brit Awards</h2>
-        <h3 class="cs-single-blurb">Live Social Voting </h3>
+
+          <h2 class="cs-single-headline">{{title}}</h2>
+          <h2 class="cs-single-channel">{{channel}}</h2>
+          <h3 class="cs-single-blurb">{{blurb}} </h3>
         
         </header>
         
         <article class="cs-split cs-single-content">
 
                 <div class="cs-split-column">
+                        
+                        <div style="padding:56.25% 0 0 0;position:relative;">
+                          <iframe :src="'https://player.vimeo.com/video/'+vimeo_id+'?title=0&byline=0&portrait=0'" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                          </div><script src="https://player.vimeo.com/api/player.js"></script>
 
-                        <iframe class="cs-single-video" src="https://player.vimeo.com/video/67550942" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                        <p class="cs-single-data">Over 5 million social votes cast, 41,000 tweets per second </p>
+                        <p class="cs-single-data">{{stats}}</p>
 
                 </div>
                 <div class="cs-split-column">
                     
-                    <img src="/img/one_direction_brits.jpg" class="cs-single-main-image" />
-                    
+                    <img :src="'/img/cs/'+main_image" class="cs-single-main-image" />
 
-                        <p class="cs-single-copy">Using our extensive expertise and understanding of live audience behaviours we work to enhance existing shows and titles to increase audience interaction with complementary editorial engagement enhancements. </p>
-                        <p class="cs-single-copy">Introducing new interactive features and mechanics giving live shows and events a unique interactive enhancement angle. </p>
-                        <p class="cs-single-copy">Having worked on new breakout interactive formats across broadcast entertainment, sport, news, music & live events as well as enhancing existing well known titles we are expertly placed to supersize your production with engagement and interactive features that are resonating innovations, not gimmicks. </p>
-
+                    <p class="cs-single-copy">Hypothesis Media have been commissioned for the past 5 years to ideate and manage the live audience engagement for the biggest international dogs show, Crufts. Broadcast on Channel 4 and working with the production company, broadcaster and interactive technology partners we have been regularly tasked to improve on each of the previous year’s shows with more ambitious interactive executions that drive the social narrative around #Crufts during the live Channel 4 shows.</p>
+                    <p class="cs-single-copy">The execution currently features a dynamic media wall that shows the best video and images from home viewers with their favourite canines as well as a real time predictor poll on the final day where audiences get to choose who will win ‘Best in Show’.</p>
+                    <p class="cs-single-copy">Hypothesis Media ensure that the full end to end process from tweet to television is planned and managed fully ensuring that the editorial content is enhanced each year by the social engagement that appeals to the vast amount of Crufts fans and viewers.</p>
 
 
                 </div>
             
-        </article> 
-
-        <hr class="linebreaker"/>
-
-
-
-
-    </section>
+        </article>
+</section>
   
 </template>
-
-<script>
-
-
-
-
-
-export default {
-  scrollToTop: true,
-  components:{
-    
-
-  
-  },
-
-  
-
-  mounted(){
-
-
-
-  },
-
-  data(){
-    return{
-      observer:null,
-    }
-  },
-  methods:{
-
-      shout:function(what){
-        // alert('argh!'+what)
-        this.$emit('onSection'+what)
-      }
-    
-  },
-}
-
-
-
-
-
-
-
-
-</script>
-
-<style scoped>
-
-:root{
-    --fs-cs-single : 7.6rem;
- 
-}
-.cs-single{
-  padding:var(--u-hss-padding);
-}
-.cs-single-header{
-    margin-top:5em;
-
-}
-.cs-single-content{
-    padding:10em 0 30vh;
-}
-.cs-split{
-    display:flex;
-    flex-direction:row;
-}
-.cs-split-column:first-child{
-    padding-right:var(--u-column-padding);
-}
-.cs-split-column:last-child{
-    padding-left:var(--u-column-padding);
-}
-.cs-split-column{
-    
-    width:50%;
-    flex:1 1;
-}
-.cs-single-video{
-    width:100%;
-    /* height:auto; */
-    /* height:0; */
-    /* height:56.25%; */
-}   
-.cs-single-main-image{
-    max-width: 100%;
-    width:100%;
-    border-radius:var(--u-border-radius);
-
-}
-.cs-single-copy{
-    margin-top:1em;
-    font-size: var(--fs-body);
-}
-.cs-single-headline{
-    
-
-  font-size:var(--fs-headline);
-  font-weight:500;
-
-  letter-spacing:-.02em;
-  margin:0;
-  padding:0;
-
-
-}
-
-
-.cs-single-blurb{
-  font-size:var(--fs-cs-blurb);
-  font-weight:700;
-  letter-spacing:-.02em;
-  margin:0;
-  padding:0;
-}
-.cs-single-data{
-    margin:0;
-  padding:0;
-    margin-top:1em;
-    font-weight:500;
-    letter-spacing:-.02em;
-    line-height:1;
-    font-size:var(--fs-cs-single-data);
-    /* font-style:italic; */
-  /* font-size:var(--fs-cs-data); */
-  
-}
-
-</style>
-
-
 
