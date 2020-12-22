@@ -11,8 +11,11 @@
     <section id="home" class=" homepage-video-hero js-observed is_active">
         
         <!-- <Slideshow />  -->
-        <VideoLoop class="videoLoop" v-if="!reel"/>
-        <Showreel v-if="reel" />
+        <VideoLoop class="videoLoop" v-if="!reel" 
+          src="https://hypothesismedia.s3.eu-west-2.amazonaws.com/HYPOTHESIS_MEDIA_FINAL_CUT_LOOP_002.mp4" />
+        
+        <Showreel v-if="reel" @reelEnded="toggleReel"         
+          src="https://hypothesismedia.s3.eu-west-2.amazonaws.com/HYPOTHESIS_MEDIA_FINAL_CUT_004.mp4" />
         
 
       <div class="playshowreel"> 
@@ -34,17 +37,15 @@
     <h3 class="homepage-story-slide-headline">Who we are</h3>
     <div class="homepage-story-slide-content who-we-are-copy">
       We are a niche consultancy specialising in interactive and audience engagement innovation across live broadcast and events.
-
-Experts in viewer engagement and fan interaction. 
-
+      Experts in viewer engagement and fan interaction. 
 Creating and delivering global firsts by fusing editorial content with interactive technologies to bring audiences closer to their favourite shows and events. 
-
 Working with best of breed industry partners to streamline, innovate and deliver breakout interactive engagement concepts that move the live broadcast industry forward.
+
     </div>
     
-    <div class="homepage-story-slide-content">
+    
       <Grid />
-    </div>
+    
 
   </section>
 
@@ -200,11 +201,12 @@ animation-duration: .75s;
   /* max-width: var(--l-max-w); */
   margin-top:0;
   min-height:100vh;
+  width:100%;
   scroll-snap-align: start;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* display:flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
   z-index:500;
 }
 
@@ -264,38 +266,6 @@ footer{
 
 
 
-/*
-
-at 1100px story width, border length is 3125px
-
-
-CORNERS:
-
-
-LB 
-    --story-border-space: 870px;
-    --story-border-offset: 270px;
-
-RB
-
-
---story-border-space: 1200px;
---story-border-offset: 600px  
-TL
-
---story-border-space: 420px;
---story-border-offset: -110px;
-
-TR
-
-
---story-border-space: 660px;
---story-border-offset: 1800px;
-
-*/
-
-
-
 
 .who-we-are-copy{
   columns: 2;
@@ -303,8 +273,17 @@ TR
 }
 
 
+.playshowreel{
+  /* background: yellow; */
+  justify-self: flex-end;
+}
 .playshowreel-button{
-  font-size:2.4rem;
+  display:block;
+  padding:.5em;
+  margin:0 auto;
+  font-size:1.8rem;
+  font-weight:500;
+text-align:center;
    cursor:pointer;
 
   /* justify-self: flex-end; */

@@ -28,34 +28,40 @@
 export default{
 
     name:'VideoLoop',
+    props:{
+      src:String,
+    },
     data(){
         return{
           loading:true,
-          src:'https://hypothesismedia.s3.eu-west-2.amazonaws.com/HYPOTHESIS_MEDIA_FINAL_CUT_LOOP.mp4',
+          
         }
     },
     mounted(){
-      let options = {
-          rootMargin: '0px',
-          threshold: [0,.1,.2,.3,.4,.5,.6,.7,.8,.9,1]
-      }
 
-      this.observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {    
-          if(entry.isIntersecting){
-              if(entry.intersectionRatio > .5){
-                  this.play();
-              }
-          }
-          else{
-              this.pause();
-          }
-          });
-  
-      },options);
+        let options = {
+            rootMargin: '0px',
+            threshold: [...Array(30).keys()].map(x => x / 29),
+        }
 
-      this.observer.observe(this.$refs['js-loop-player']);
-  },
+        this.observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {    
+            if(entry.isIntersecting){
+                if(entry.intersectionRatio > .5){
+                    this.play();
+                }
+            }
+            else{
+                this.pause();
+            }
+            });
+
+        },options);
+        this.observer.observe(this.$refs['js-loop-player']);
+    },
+    beforeDestroy(){
+        this.observer.unobserve(this.$refs['js-loop-player']);
+    },
   methods:{
     canPlay(e){
       this.loading = false;
@@ -87,7 +93,7 @@ export default{
     /* font-weight:500; */
     line-height:1;
     transition:all .5s;
-    font-family: Oswald;
+    font-family: var(--ff-oswald);
     text-transform: uppercase;
     text-align: center;
     font-weight: 150;
@@ -101,10 +107,14 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 }
+
+
+
 .video-player-frame{
   background:var(--c-dark);
   width:100%;
-  min-height: 80vh;
+  height: 80vh;
+  margin-top:10vh;
   /* border:1px solid red; */
   /* height:100%; */
 
