@@ -1,32 +1,19 @@
 <template>
   <div>
-
-    
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@350&display=swap" rel="stylesheet">
       <header class="header-main">
-       <hgroup class="header-main-split">
-          
-         <a href="/#home"><img src="/hypothesismedia-logo.svg" class="header-logo"  /></a>
-        
-        <NavigationToggle :expanded="navigation_expanded" @click.native="navToggle"
+        <hgroup class="header-main-split">
+          <a href="/#home"><img src="/hypothesismedia-logo.svg" class="header-logo"  /></a>
+          <NavigationToggle :expanded="navigation_expanded" @click.native="navToggle"
           class="header-navigation-toggle-button" />
-      
-      </hgroup>
-
-            
-    </header>
-     <Navigation :expanded="navigation_expanded" :current="navigation_position" /> 
-  
-     <Navigation :expanded="navigation_expanded" :current="navigation_position" />
-
-
-    <Nuxt class="main" />
-    <footer class="slide-snap"></footer>
+        </hgroup>
+      </header>
+      <Navigation :expanded="navigation_expanded" :current="navigation_position" />   
+      <Navigation :expanded="navigation_expanded" :current="navigation_position" />
+      <Nuxt class="main" />
+      <footer class="slide-snap"></footer>
   </div>
 </template>
-
-
-
-
 <script>
 import Navigation from '~/components/Navigation.vue';
 import NavigationToggle from '~/components/NavigationToggle.vue';
@@ -34,10 +21,7 @@ import NavigationToggle from '~/components/NavigationToggle.vue';
 
 export default{
 scrollToTop: true,
-    components:{
-      NavigationToggle,
-      Navigation,
-    },
+    
     data(){
       return{
         navigation_expanded:false,
@@ -47,23 +31,7 @@ scrollToTop: true,
         
       }
     },
-    mounted(){
-   
-        console.log('layout cs')
-        console.log('yay! new layout!')
-
-  },
-
-    methods:{}
-
-      
-    
-
+    mounted(){},
+    methods:{},
 }
 </script>
-
-<style>
-
-
-</style>
-

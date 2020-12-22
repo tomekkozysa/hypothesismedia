@@ -92,10 +92,13 @@ export default {
  
 }
 .cs-single{
-  padding:var(--u-hss-padding);
+  /* padding:var(--u-hss-padding); */
+  max-width: var(--l-max-w);
+  padding-top:20vh;
+  align-items: flex-start;
 }
 .cs-single-header{
-    margin-top:5em;
+    /* margin-top:5em; */
 
 }
 .cs-single-content{
@@ -137,6 +140,8 @@ export default {
 
   font-size:var(--fs-headline);
   font-weight:500;
+  font-family: var(--ff-oswald);
+  text-transform: uppercase;font-weight: 150;
 
   letter-spacing:-.02em;
   margin:0;
