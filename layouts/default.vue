@@ -206,8 +206,8 @@ export default{
   --fs-cs-blurb: 2.8rem;
   --fs-cs-data: 2.4rem;
   
-  --fs-cs-headline:2.2rem;
-  --fs-cs-blurb: 2.8rem;
+  --fs-cs-headline:2.8rem;
+  --fs-cs-blurb: 2.2rem;
   --fs-cs-data: 4.8rem;
   
   
@@ -312,7 +312,7 @@ body{
 
 
 .slide-snap{
-    /* scroll-snap-align: start; */
+    scroll-snap-align: start;
     
 }
 

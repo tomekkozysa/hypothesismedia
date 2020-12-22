@@ -19,9 +19,9 @@
                 </svg>
             </div>
             <div class="case-study-teaser-caption" >
+          <h3 class="case-study-headline">The Brit Awards</h3>
           <p class="case-study-data">Over 5 million social votes cast, 41,000 tweets per second</p>
           <p class="case-study-blurb"> Live Social Voting </p>
-          <h3 class="case-study-headline">The Brit Awards</h3>
           </div>
         </div>
 
@@ -41,9 +41,9 @@
             </div>
             <div class="case-study-teaser-caption" >
 
+          <h3 class="case-study-headline">The Million Pound Drop</h3>
           <p class="case-study-data"> 12.5% of all live TV audience played along </p>
           <p class="case-study-blurb"> Live Audience Play Along</p>
-          <h3 class="case-study-headline">The Million Pound Drop</h3>
           </div>
         </div>
 
@@ -60,9 +60,9 @@
             </div>
             <div class="case-study-teaser-caption" >
 
+          <h3 class="case-study-headline">Crufts</h3>
           <p class="case-study-data">Most socially engaged show across whole of Channel 4 each consecutive year in March</p>
           <p class="case-study-blurb"> Live Broadcast Audience Engagement</p>
-          <h3 class="case-study-headline">Crufts</h3>
           </div>
         </div>
 </NuxtLink>
@@ -78,9 +78,9 @@
             </div>
             <div class="case-study-teaser-caption" >
 
+          <h3 class="case-study-headline">The Voice</h3>
           <p class="case-study-data">Global first live social mosaic on TV</p>
           <p class="case-study-blurb"> Interactive Concept Ideation</p>
-          <h3 class="case-study-headline">The Voice</h3>
           </div>
         </div>
 </NuxtLink>
@@ -96,9 +96,9 @@
             </div>
             <div class="case-study-teaser-caption" >
 
+          <h3 class="case-study-headline">Ed Sheeran 'X' </h3>
           <p class="case-study-data">5% of all UK TV viewing public watching </p>
           <p class="case-study-blurb">Live Dynamic Broadcast Advertising</p>
-          <h3 class="case-study-headline">Ed Sheeran 'X' </h3>
           </div>
         </div>
 </NuxtLink>
@@ -114,9 +114,9 @@
             </div>
             <div class="case-study-teaser-caption" >
 
+          <h3 class="case-study-headline">Years & Years - 'Shine'</h3>
           <p class="case-study-data">More viewers watching this ad than the TV show around it, 14,000 tweets received in 4 minutes</p>
           <p class="case-study-blurb"> Live Gamification TV Advert</p>
-          <h3 class="case-study-headline">Years & Years - 'Shine'</h3>
           </div>
         </div>
 </NuxtLink>
@@ -177,9 +177,9 @@ export default{
 .case-study-teaser-link:nth-child(odd) .case-study-teaser{
     flex-direction: row-reverse;
 }
-
-
 .case-study-headline{
+
+
   font-size:var(--fs-cs-headline);
   font-weight:500;
   line-height: 1;
@@ -197,7 +197,7 @@ export default{
 .case-study-data{
     margin:0;
     padding:0;
-    margin-top:1em;
+    margin-top:.25em;
     font-weight:500;
     letter-spacing:-.02em;
     line-height:1;
