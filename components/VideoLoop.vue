@@ -98,6 +98,8 @@ export default{
     text-align: center;
     font-weight: 150;
     z-index:10000;
+
+    user-select: none;
 }
 .headline-holder{
    grid-column: 1 / 3;
@@ -140,10 +142,10 @@ justify-content: center;
   outline:none;
   filter:saturate(.8);
   mix-blend-mode: screen;
-  opacity:.5;
+  opacity:.3;
   object-fit:cover;
 
-  opacity:1;
+  opacity:.5;
   transition:opacity 1.5s ease-in-out .5s;
 
 }
