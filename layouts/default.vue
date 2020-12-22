@@ -156,8 +156,7 @@ export default{
 
       },
       
-      navToggle:function(e){
-        
+      navToggle:function(e){        
         this.navigation_expanded = !this.navigation_expanded;
       },
       
