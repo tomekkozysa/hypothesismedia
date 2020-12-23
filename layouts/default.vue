@@ -263,16 +263,19 @@ export default{
       --fs-headline:4.8rem;  
 
        --fs-headline-small:3.2rem;
-  --fs-list-item:3.2rem;
+
+
+       
+  --fs-list-item:2.8rem;
   --fs-body:1.8rem;
   --fs-navigation:1.6rem;
 
   --fs-cs-headline:2.4rem;
   --fs-cs-blurb: 2.2rem;
-  --fs-cs-data: 3.2rem;
+  --fs-cs-data: 2.8rem;
 
   --fs-cs-single-title : 4.8rem;
-  --fs-cs-single-data: 3.2rem;
+  --fs-cs-single-data: 2.8rem;
 
       --l-padding-rl:20px;
 

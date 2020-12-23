@@ -131,12 +131,12 @@ justify-content: center;
 
 }
 
-@media (max-width: 961px) {
+/* @media (max-width: 961px) {
   .video-player-frame{
     height: 70vh;
     margin-top:0;
   }
-}
+} */
 
 
 .video-player{

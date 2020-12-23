@@ -73,15 +73,7 @@ scrollToTop: true,
     flex:1 1;
 }
 
- @media (max-width: 961px) {
-  .cs-split-column:nth-child(n){
-    width:100%;
-    padding:1em 0 0;
-  }
-  .cs-split{
-    flex-direction:column;
-}
- }
+ 
 
 .cs-single-video{
     width:100%;
@@ -139,5 +131,18 @@ scrollToTop: true,
   
 }
 
+@media (max-width: 961px) {
+  .cs-split-column:nth-child(n){
+    width:100%;
+    padding:1em 0 0;
+  }
+  .cs-split{
+    flex-direction:column;
+}
+.cs-single-main-image{
+  padding:1em 0 0;
+}
+ }
 
+ 
 </style>

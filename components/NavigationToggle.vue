@@ -95,14 +95,14 @@ export default{
     }
 
 
-
+@media (min-width: 961px) {
 .nav-toggle-button:hover .nav-toggle-button-line-one{   
     transform:translate(0, 6px);
 }
 .nav-toggle-button:hover .nav-toggle-button-line-two{   
     transform:translate(0, -6px);
 }
-
+}
 
 
 /* CLOSE ICON */

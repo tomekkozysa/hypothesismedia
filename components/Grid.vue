@@ -70,5 +70,16 @@ export default{
     max-width: 100px;
 }
 
+@media (max-width: 961px) {
+ .grid-item{
+   
+   /* width:calc(33% - .2em); */
+   width:calc(25% - .2em);
+}
 
+.grid-item-logo{
+    
+    max-width: 60px;
+}
+}
 </style>

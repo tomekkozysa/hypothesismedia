@@ -21,10 +21,10 @@
     <section id="who-we-are" class="homepage-story-slide js-observed slide-snap">
       <h3 class="homepage-story-slide-headline">Who we are</h3>
       <div class="homepage-story-slide-content who-we-are-copy">
-      We are a niche consultancy specialising in interactive and audience engagement innovation across live broadcast and events.
-      Experts in viewer engagement and fan interaction. 
-Creating and delivering global firsts by fusing editorial content with interactive technologies to bring audiences closer to their favourite shows and events. 
-Working with best of breed industry partners to streamline, innovate and deliver breakout interactive engagement concepts that move the live broadcast industry forward.
+      <p>We are a niche consultancy specialising in interactive and audience engagement innovation across live broadcast and events.
+      Experts in viewer engagement and fan interaction. </p>
+<p>Creating and delivering global firsts by fusing editorial content with interactive technologies to bring audiences closer to their favourite shows and events. </p>
+<p>Working with best of breed industry partners to streamline, innovate and deliver breakout interactive engagement concepts that move the live broadcast industry forward.</p>
       </div>
       <Grid />
     </section>
@@ -251,7 +251,9 @@ footer{
   column-gap: 2em;
 }
 
-
+.who-we-are-copy p:not(:first-child){
+    margin-top:1em;
+}
  @media (max-width: 961px) {
 
 .who-we-are-copy{
