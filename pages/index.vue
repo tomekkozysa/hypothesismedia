@@ -1,16 +1,9 @@
 <template>
   <article class="homepage-story">
     
-    <!-- <section id="home" class=" homepage-story-carousel js-observed is_active">
-        
-        <Slideshow /> 
-        
-       
-    </section> -->
 
     <section id="home" class=" homepage-video-hero js-observed is_active">
         
-        <!-- <Slideshow />  -->
         <VideoLoop class="videoLoop" v-if="!reel" 
           src="https://hypothesismedia.s3.eu-west-2.amazonaws.com/HYPOTHESIS_MEDIA_FINAL_CUT_LOOP_002.mp4" />
         
@@ -21,51 +14,37 @@
       <div class="playshowreel"> 
         <p v-if="!reel" class="playshowreel-button" @click="toggleReel">play showreel</p>
         <p v-if="reel" class="playshowreel-button" @click="toggleReel">close showreel</p>
-        </div>
+      </div>
        
     </section>
-      
-      
-      
-      
 
-     
-
-
-
-<section id="who-we-are" class="homepage-story-slide js-observed scroll-snap">
-    <h3 class="homepage-story-slide-headline">Who we are</h3>
-    <div class="homepage-story-slide-content who-we-are-copy">
+    <section id="who-we-are" class="homepage-story-slide js-observed slide-snap">
+      <h3 class="homepage-story-slide-headline">Who we are</h3>
+      <div class="homepage-story-slide-content who-we-are-copy">
       We are a niche consultancy specialising in interactive and audience engagement innovation across live broadcast and events.
       Experts in viewer engagement and fan interaction. 
 Creating and delivering global firsts by fusing editorial content with interactive technologies to bring audiences closer to their favourite shows and events. 
 Working with best of breed industry partners to streamline, innovate and deliver breakout interactive engagement concepts that move the live broadcast industry forward.
-
-    </div>
-    
-    
+      </div>
       <Grid />
-    
+    </section>
 
-  </section>
-
-<section id="what-we-do" class="homepage-story-slide js-observed is_full_size scroll-snap"><!-- slide-snap -->
-    <h3 class="homepage-story-slide-headline">What we do</h3>
-<WhatWeDo  class="homepage-story-slide-content" />
-</section>
+    <section id="what-we-do" class="homepage-story-slide js-observed is_full_size slide-snap"><!-- slide-snap -->
+      <h3 class="homepage-story-slide-headline">What we do</h3>
+      <WhatWeDo  class="homepage-story-slide-content" />
+    </section>
 
  
   <section id="case-studies" class="homepage-story-slide js-observed">
-    <h3 class="homepage-story-slide-headline">Case Studies</h3>
-
-    
-
-    
+    <h3 class="homepage-story-slide-headline">Case Studies</h3>    
     <Cascade  class="homepage-story-slide-content" />   
   </section>
 
   <section id="contact" class="homepage-story-slide slide-snap js-observed ">
     <h3 class="homepage-story-slide-headline">Contact</h3>
+
+    <Contact class="homepage-story-slide-content" />
+
   </section>
   
 
@@ -88,8 +67,9 @@ import Slideshow from '~/components/Slideshow4.vue';
 import VideoLoop from '~/components/VideoLoop.vue';
 import Showreel from '~/components/Showreel.vue';
 import WhatWeDo from '~/components/WhatWeDo.vue';
-import WhatWeDo2 from '~/components/WhatWeDo2.vue';
+
 import Grid from '~/components/Grid.vue';
+import Contact from '~/components/Contact.vue';
 
 
 
@@ -101,9 +81,10 @@ export default {
     Expander,
     Slideshow,
     WhatWeDo,
-    WhatWeDo2,
+    
     Cascade:CascadeTwo,
-    Grid
+    Grid,
+    Contact
 
   
   },
@@ -121,7 +102,6 @@ export default {
   methods:{
 
       shout:function(what){
-        // alert('argh!'+what)
         this.$emit('onSection'+what)
       },
       toggleReel(){
@@ -176,11 +156,10 @@ animation-duration: .75s;
   width:100%;
   min-height:80vh;
   
-  /* padding:var(--u-hss-padding); */
-  margin-top:-10vh;
-  padding:10vh 0;
+  margin-top:calc(0 - var(--u-slide-shift-y));
+  /* padding:10vh 0; */
   max-width: var(--l-max-w);
-  padding:10vh 80px;
+  padding:var(--u-slide-shift-y) var(--l-padding-rl);
   
   /* opacity: 0; */
 
@@ -271,6 +250,15 @@ footer{
   columns: 2;
   column-gap: 2em;
 }
+
+
+ @media (max-width: 961px) {
+
+.who-we-are-copy{
+  columns: 1;
+}
+ }
+
 
 
 .playshowreel{

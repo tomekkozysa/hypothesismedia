@@ -7,9 +7,8 @@
         <a href="/#home"><img src="/hypothesismedia-logo.svg" class="header-logo"  /></a>
         <NavigationToggle :expanded="navigation_expanded" @click.native="navToggle" class="header-navigation-toggle-button" />     
       </hgroup>
-    </header>
-    
-    <Navigation :expanded="navigation_expanded" :current="navigation_position" />
+    </header> 
+     <Navigation :expanded="navigation_expanded" :current="navigation_position" />
     <Nuxt class="main" @onSection="onSection" />
     
     <footer class="slide-snap"></footer>
@@ -190,7 +189,10 @@ export default{
   --cg-header:linear-gradient(0deg, rgba(0,0,0,0) 0%, var(--c-dark) 30%, var(--c-dark) 100%);
   --cg-main:linear-gradient(0deg, var(--c-light) 0%, var(--c-dark) 50%);
 
+  
   --fs-headline:7.6rem;  
+
+ 
   --fs-headline-small:4.2rem;
   --fs-list-item:4.2rem;
   --fs-body:2.4rem;
@@ -210,6 +212,7 @@ export default{
   --fs-cs-data: 4.8rem;
   
   
+  --fs-cs-single-title : 7.6rem;
   --fs-cs-single-data:5.6rem;
 
 
@@ -217,12 +220,18 @@ export default{
   --ff-oswald:'Oswald', Impact, sans-serif;
 
   --l-max-w:1400px;
+  --l-padding-rl:80px;
+
+
   --u-logo-width:140px; 
+  --u-header-h:120px;
+  --u-slide-shift-y:10vh;
 
   --u-nav-icon-size:30px;
   --u-border-radius:20px;
 
   /* cascade colulmn */
+  /* what we do colulmn */
   --u-column-padding: 40px;
 
 
@@ -249,6 +258,32 @@ export default{
 
 }
 
+ @media (max-width: 961px) {
+   :root{
+      --fs-headline:4.8rem;  
+
+       --fs-headline-small:3.2rem;
+  --fs-list-item:3.2rem;
+  --fs-body:1.8rem;
+  --fs-navigation:1.6rem;
+
+  --fs-cs-headline:2.4rem;
+  --fs-cs-blurb: 2.2rem;
+  --fs-cs-data: 3.2rem;
+
+  --fs-cs-single-title : 4.8rem;
+  --fs-cs-single-data: 3.2rem;
+
+      --l-padding-rl:20px;
+
+
+        --u-logo-width:100px; 
+  --u-header-h:60px;
+
+   }
+    
+  }
+
 
 
 html {
@@ -262,8 +297,8 @@ html {
     Arial,
     sans-serif; */
   /* font-size: 16px; */
- font-size:62.5%;
   /* word-spacing: 1px; */
+ font-size:62.5%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -273,8 +308,8 @@ html {
   text-rendering: optimizeSpeed;
   /* text-rendering: optimizeLegibility; */
    /* body won't work ¯\_(ツ)_/¯ */
-  /* scroll-snap-type: y mandatory; */
   scroll-snap-type: y proximity;
+  /* scroll-snap-type: y mandatory; */
   /* scroll-padding-top: 200px; */
 }
 svg{
@@ -283,21 +318,11 @@ svg{
 body{ 
   
   font-family:'Helvetica Neue', Arial, sans-serif;
-  /* font-size:16px; */
-  /* font-size:1.6rem; */
-  /* font-size:var(--fs-body); */
   
   padding:0;
   margin:0;
   background:var(--c-dark);
   color:var(--c-body);
-  
-  /* text-shadow: var(--c-light) 1px 1px 0; */
-
-  /* background:var(--c-dark) var(--cg-main) no-repeat 0; */
-  /* background:url(/img/tmp3.gif); */
-  background-attachment:fixed;
-  background-size:100vw 100vh;
    
 }
 
@@ -311,8 +336,7 @@ body{
 
 
 .slide-snap{
-    scroll-snap-align: start;
-    
+    scroll-snap-align: start;    
 }
 
 
@@ -333,38 +357,41 @@ body{
   z-index: 10000;
 }
 
+
 .header-main{
-  /* display:none; */
-  height: 120px;
-  /* background:var(--c-dark); */
+  height: var(--u-header-h);
   position: -webkit-sticky;
   position: sticky;
   top:0;
   z-index:500000;
-/* scroll-snap-align: start; */
-padding:2em 10px 2em 2em;
+  padding:2em 10px 2em 2em;
 
-    /* background:transparent var(--cg-header) no-repeat 0; */
-    /* background:var(--c-dark); */
-    background:transparent
-  /* background-attachment:fixed; */
-  /* background-size:100vw 50vh; */
-
+  
 }
+ @media (max-width: 961px) {
+   .header-main{
+  position: default;
+  padding:1em 10px 1em 1em;
+  }
+ }
+
 .header-logo{
   width:var(--u-logo-width);
+  /*TODO*/
   filter:brightness(200);
 }
 
 .header-navigation-toggle-button{
-  /* flex-grow:2; */
   height:40px;
-        width: 40px;
-        display:flex;
-        align-items: center;
-        justify-content: flex-end;
-        cursor: pointer;
+  width: 40px;
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
 }
 
+footer{
+  min-height: 30vh;
+}
 </style>
 

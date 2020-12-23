@@ -76,12 +76,16 @@ export default{
 
 
 
+    .nav-toggle-button:active .nav-toggle-button-line-one,
     .nav-toggle-button-line-one{
     transform:translate(0, 3px);
     transform-origin: center;
     transition: transform .3s;
     stroke-width: 3px;
     }
+
+    
+    .nav-toggle-button:active .nav-toggle-button-line-two,
     .nav-toggle-button-line-two{
     transform:translate(0, -3px);
     transform-origin: center;

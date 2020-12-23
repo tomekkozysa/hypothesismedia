@@ -32,7 +32,7 @@
 
            <div class="expander-split">
             <div class="expander-image-frame image-brits">
-               <img src="/img/mrbrit2.jpg" class="expander-image" />
+               <img src="/img/viewer-engagement.jpg" class="expander-image" />
             </div>
             <div class="expander-copy">
                 <p>Using our extensive expertise and understanding of live audience behaviours we work to enhance existing shows and titles to increase audience interaction with complementary editorial engagement enhancements. </p>
@@ -142,13 +142,12 @@ export default{
 
 
 
-
+/* 
 .who-we-are-copy{
   columns: 2;
-  column-gap: 2em;
+  column-gap: var(--u-column-padding);
 }
-
-
+ */
 
 
 
@@ -169,6 +168,7 @@ export default{
     width:60%;
     font-size: var(--fs-body);
     padding: 0 0 0 4em;
+    line-height: 1.2;
 }
 .expander-copy p:not(:first-child){
     margin-top:1em;
@@ -193,6 +193,22 @@ export default{
 }
 
 
+ @media (max-width: 961px) {
+
+.expander-image-frame{
+  width:100%;
+}
+.homepage-content-list-item:nth-child(n) .expander-copy{
+  width:100%;
+  padding:1em 0;
+}
+
+
+.homepage-content-list-item:nth-child(n) .expander-split{
+flex-direction: column;   
+
+ }
+ }
 
 
 

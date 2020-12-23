@@ -114,6 +114,12 @@ export default{
 
 }
 
+@media (max-width: 961px) {
+   .navigation{
+     right: -300px;
+  }
+ }
+
 .navigation-item-label{
   display: inline-block;
  padding-left:1em;
@@ -123,6 +129,8 @@ export default{
 .navigation.is_expanded .navigation-item-label{
   padding-left:0;
 }
+
+
 .navigation:hover,
 .navigation.is_expanded{
   right:0%;

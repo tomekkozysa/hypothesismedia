@@ -326,38 +326,35 @@ transform: translate(5px, 0);
 }
 
 
-/* .case-study-teaser-media::after{
-  display:block;
-  position:absolute;
-   top:-5px;
-  left:5px;
-  z-index:-100;
-  content:" ";
-  width:100%;
-  height: 100%;
-  border-radius:2em;
-  opacity:.5;
-  border:1px solid pink;
-  
-}  */
 
-/* .case-study-teaser-media::before{
-  display:block;
-  position:absolute;
- top:5px;
-  left:-5px;
-  
-  z-index:-100;
-  content:" ";
-  width:100%;
-  height: 100%;
-  border-radius:.5em;
-  opacity:.2;
-   background-blend-mode: overlay;
-  background:var(--c-light);
-  
-}  */
+ @media (max-width: 961px) {
 
+   .case-study-teaser{
+    padding:1em 0;
+    margin:2em 0;
+   }
+.case-study-teaser-media{
+  width:100%;
+  padding:0;
+}
+
+
+.case-study-teaser-caption{
+  width:100%;
+  padding:0em 0 0;
+}
+.case-study-teaser-link:nth-child(n) .case-study-teaser{
+    flex-direction: column;
+
+}
+
+.case-study-headline{
+  margin-top:1em;
+}
+.case-study-data{
+  margin-top:1em;
+}
+ }
 
 
 </style>

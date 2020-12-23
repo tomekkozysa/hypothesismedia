@@ -42,14 +42,12 @@ scrollToTop: true,
 </script>
 <style>
 
-:root{
-    --fs-cs-single : 7.6rem;
- 
-}
+
+
 .cs-single{
   /* padding:var(--u-hss-padding); */
   max-width: var(--l-max-w);
-  padding:20vh 80px;
+  padding:var(--u-slide-shift-y) var(--l-padding-rl);
   align-items: flex-start;
 }
 .cs-single-header{
@@ -74,6 +72,17 @@ scrollToTop: true,
     width:50%;
     flex:1 1;
 }
+
+ @media (max-width: 961px) {
+  .cs-split-column:nth-child(n){
+    width:100%;
+    padding:1em 0 0;
+  }
+  .cs-split{
+    flex-direction:column;
+}
+ }
+
 .cs-single-video{
     width:100%;
     /* height:auto; */

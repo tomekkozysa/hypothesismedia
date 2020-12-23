@@ -1,10 +1,13 @@
 <template>
     <div class="video-player-frame"> 
-        <video ref="js-video-player" :class="{is_loading:loading}" class="video-player" controls 
+        <video ref="js-video-player" :class="{is_loading:loading}" class="video-player" 
+        controls playsinline autoplay
         @ended = "ended"
         @canplay="canPlay">
             <source :src="src" type="video/mp4">
         </video>
+
+        <!--   -->
     </div>
 </template>
 
@@ -69,10 +72,17 @@
 
 .video-player{
 
-    height:100%;
+    /* height:100%;
+    width:100%;
+    object-fit:contain;
+     */
+    height:auto;
+    max-height:80vh;
+
     width:100%;
     
-    object-fit:contain;
+
+
     outline:none;
     filter:saturate(.8);
 
@@ -82,6 +92,7 @@
     opacity:1;
 
     justify-self:center;
+    align-self:center;
     transition:opacity 1.5s ease-in-out .5s;
 }
 

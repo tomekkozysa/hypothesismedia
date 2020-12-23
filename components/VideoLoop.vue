@@ -16,7 +16,7 @@
         <p class="playshowreel-button">play showreel</p>
         </div> -->
 
-      <video ref="js-loop-player" class="video-player" :class="{is_loading:loading}" loop muted autoplay @canplay="canPlay">
+      <video ref="js-loop-player" class="video-player" :class="{is_loading:loading}" loop muted playsinline autoplay @canplay="canPlay">
         <source :src="src" type="video/mp4">
 
       </video>
@@ -68,11 +68,11 @@ export default{
       console.log('canplay')
     },
     play(){
-      this.$refs['js-loop-player'].play();
+      // this.$refs['js-loop-player'].play();
       
     },
     pause(){
-      this.$refs['js-loop-player'].pause();
+      // this.$refs['js-loop-player'].pause();
     },
   }
   
@@ -117,6 +117,7 @@ justify-content: center;
   width:100%;
   height: 80vh;
   margin-top:10vh;
+  
   /* border:1px solid red; */
   /* height:100%; */
 
@@ -129,6 +130,15 @@ justify-content: center;
 
 
 }
+
+@media (max-width: 961px) {
+  .video-player-frame{
+    height: 70vh;
+    margin-top:0;
+  }
+}
+
+
 .video-player{
 
    grid-column: 1 / 3;
@@ -142,7 +152,6 @@ justify-content: center;
   outline:none;
   filter:saturate(.8);
   mix-blend-mode: screen;
-  opacity:.3;
   object-fit:cover;
 
   opacity:.5;
@@ -153,6 +162,7 @@ justify-content: center;
   opacity:0;
    
 }
+
 
 
 .homepage-intro-story-border{
@@ -181,7 +191,17 @@ justify-content: center;
   
 }
 
+ @media (max-width: 961px) {
 
+.homepage-intro-story-border{
+
+  
+  width:calc(100% - 40px);
+  height:calc(100% - 40px);
+
+  transform:translate(20px, 20px);
+  }
+}
 
 
 
