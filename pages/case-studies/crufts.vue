@@ -20,7 +20,7 @@ export default {
 
 <template>
  
-    <section class="cs-single slide-snap">
+    <section class="cs-single">
         <header class="cs-single-header">
 
           <h2 class="cs-single-headline">{{title}}</h2>
