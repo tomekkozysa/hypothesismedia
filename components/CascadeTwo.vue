@@ -157,22 +157,6 @@ export default{
     position: relative;
 }
 
-/* .case-study-teaser-caption::after{
-  display:block;
-  position:absolute;
-   top:-5px;
-  left:5px;
-  z-index:100;
-  content:" ";
-  width:100%;
-  height: 100%;
-  border-radius:.5em;
-  opacity:.5;
-  border:1px solid pink;
-  
-}  */
-
-
 
 .case-study-teaser-link:nth-child(odd) .case-study-teaser{
     flex-direction: row-reverse;
@@ -194,10 +178,13 @@ export default{
   margin:.5em 0 0;
   padding:0;
 }
+
+
 .case-study-data{
+
     margin:0;
     padding:0;
-    margin-top:.25em;
+    margin-top:.5em;
     font-weight:500;
     letter-spacing:-.02em;
     line-height:1;
