@@ -212,8 +212,9 @@ export default{
   --fs-cs-data: 4.8rem;
   
   
-  --fs-cs-single-title : 7.6rem;
+  /* --fs-cs-single-title : 17.6rem; */
   --fs-cs-single-data:5.6rem;
+  --fs-cs-single-channel:2.8rem;
 
 
 
