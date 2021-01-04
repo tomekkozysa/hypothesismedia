@@ -55,17 +55,27 @@ export default{
 }
 </script>
 <style scoped>
-
-.contact-link-icon,
+.contact{
+--u-icon-size:32px;
+}
+.contact-link-icon{
+    width:var(--u-icon-size);
+    height:var(--u-icon-size);
+      display: flex;
+    align-items: center;
+}
+.contact-link-icon-svg{
+    height:100%;
+    width:100%;
+}
 .contact-link-label{
     display: inline-block;
     padding:0 .5em;
+    /* line-height: 40px; */
 }
 
 
-.contact{
 
-}
 .contact-list{
     list-style:none;
     padding:0;
@@ -74,7 +84,6 @@ export default{
 .contact-link{
     color:var(--c-body);
     text-decoration: none;
-    display: inline-block;
     padding: .5em 0;
     
     display: flex;
