@@ -12,7 +12,7 @@
       <Navigation :expanded="navigation_expanded" :current="navigation_position" />   
       <Navigation :expanded="navigation_expanded" :current="navigation_position" />
       <Nuxt class="main" />
-      <footer class="slide-snap"></footer>
+      <footer class=""></footer>
   </div>
 </template>
 <script>
@@ -88,18 +88,18 @@ scrollToTop: true,
 
 }
 .cs-single-copy{
-    margin-top:1em;
+    margin-top:2em;
     font-size: var(--fs-body);
 }
 .cs-single-channel{
-  margin-top:.5em;
-  font-size:var(--fs-cs-blurb);
+  margin-top:.25em;
+  font-size:var(--fs-cs-single-channel);
 }
 .cs-single-headline{
     
 
   font-size:var(--fs-headline);
-  font-weight:500;
+  font-weight:300;
   font-family: var(--ff-oswald);
   text-transform: uppercase;font-weight: 150;
   line-height: 1;
@@ -118,6 +118,8 @@ scrollToTop: true,
   margin:0;
   padding:0;
 }
+
+
 .cs-single-data{
     margin:0;
   padding:0;
@@ -134,7 +136,7 @@ scrollToTop: true,
 @media (max-width: 961px) {
   .cs-split-column:nth-child(n){
     width:100%;
-    padding:1em 0 0;
+    padding:1em 0;
   }
   .cs-split{
     flex-direction:column;
@@ -142,7 +144,13 @@ scrollToTop: true,
 .cs-single-main-image{
   padding:1em 0 0;
 }
- }
-
+ 
+.cs-single-data{
+    padding:1em 0;
+}
+.cs-single-content{
+    padding:5em 0 30vh;
+}
+}
  
 </style>
