@@ -265,7 +265,7 @@ export default{
        --fs-headline-small:3.2rem;
 
 
-       
+
   --fs-list-item:2.8rem;
   --fs-body:1.8rem;
   --fs-navigation:1.6rem;
@@ -394,7 +394,7 @@ body{
 }
 
 footer{
-  min-height: 30vh;
+  min-height: 20vh;
 }
 </style>
 
