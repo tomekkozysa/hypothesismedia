@@ -84,7 +84,12 @@ export default{
 
 
 <style scoped>
-
+/* The animation code */
+@keyframes fadein{
+  from{ opacity:0}
+  to{ opacity:1}
+  
+}
 .headline{
       color:rgba(255,255,255,.9);
     text-shadow:2px 2px 30px rgba(0,0,0,.75);
@@ -99,8 +104,14 @@ export default{
     text-align: center;
     font-weight: 150;
     z-index:10000;
-
+    opacity:0;
     user-select: none;
+    animation-name:fadein;
+    animation-duration:.5s;
+    animation-delay:1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    
 }
 .headline-holder{
    grid-column: 1 / 3;
