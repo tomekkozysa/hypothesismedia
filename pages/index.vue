@@ -4,8 +4,12 @@
 
     <section id="home" class=" homepage-video-hero js-observed is_active">
         
-        <VideoLoop class="videoLoop" v-if="!reel"         
+        <!-- <VideoLoop class="videoLoop" v-if="!reel"         
           src="https://cdn.muse.ai/w/57522cc9104bd8eb4310e39e1201879578124d13f7c62c4a533f4fe1770b1e73/videos/video.mp4" />
+         -->
+        <!-- this below is a shorter version -->
+        <VideoLoop class="videoLoop" v-if="!reel"         
+          src="https://cdn.muse.ai/w/ca560fe03e91517f91d2fb618bb3e3f4d2bd425dc3324c4658afb4d24d7d27df/videos/video.mp4" />
         
         <Showreel v-if="reel" @reelEnded="toggleReel"         
           src="https://cdn.muse.ai/w/91b2ad0efd0a145169528a7df382792b82f5e050a8247a644f1bf36fe48bf5d0/videos/video.mp4" />
