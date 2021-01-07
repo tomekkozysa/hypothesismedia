@@ -21,10 +21,10 @@
     <section id="who-we-are" class="homepage-story-slide js-observed slide-snap">
       <h3 class="homepage-story-slide-headline">Who we are</h3>
       <div class="homepage-story-slide-content who-we-are-copy">
-      <p>We are a niche consultancy specialising in interactive and audience engagement innovation across live broadcast and events.
-      Experts in viewer engagement and fan interaction. </p>
-<p>Creating and delivering global firsts by fusing editorial content with interactive technologies to bring audiences closer to their favourite shows and events. </p>
-<p>Working with best of breed industry partners to streamline, innovate and deliver breakout interactive engagement concepts that move the live broadcast industry forward.</p>
+        <p>We are a niche consultancy specialising in interactive and audience engagement innovation across live broadcast and events.
+        Experts in viewer engagement and fan interaction. </p>
+        <p>Creating and delivering global firsts by fusing editorial content with interactive technologies to bring audiences closer to their favourite shows and events. </p>
+        <p>Working with best of breed industry partners to streamline, innovate and deliver breakout interactive engagement concepts that move the live broadcast industry forward.</p>
       </div>
       <Grid />
     </section>
@@ -37,7 +37,7 @@
  
   <section id="case-studies" class="homepage-story-slide js-observed">
     <h3 class="homepage-story-slide-headline">Case Studies</h3>    
-    <Cascade  class="homepage-story-slide-content" />   
+    <CascadeTwo  class="homepage-story-slide-content" />   
   </section>
 
   <section id="contact" class="homepage-story-slide slide-snap js-observed ">
@@ -46,15 +46,6 @@
     <Contact class="homepage-story-slide-content" />
 
   </section>
-  
-
-
-
-
-  
-
-
-
 
 </article>
   
@@ -73,24 +64,7 @@ import Contact from '~/components/Contact.vue';
 
 
 
-
-
 export default {
-  components:{
-    
-    Expander,
-    Slideshow,
-    WhatWeDo,
-    
-    Cascade:CascadeTwo,
-    Grid,
-    Contact
-
-  
-  },
-
-  
-
   
 
   data(){
