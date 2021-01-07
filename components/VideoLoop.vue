@@ -18,7 +18,6 @@
 
       <video ref="js-loop-player" class="video-player" :class="{is_loading:loading}" loop muted playsinline autoplay @canplay="canPlay">
         <source :src="src" type="video/mp4">
-
       </video>
 </div>
 
@@ -49,10 +48,12 @@ export default{
             if(entry.isIntersecting){
                 if(entry.intersectionRatio > .5){
                     this.play();
+                    console.log('video player play')
                 }
             }
             else{
                 this.pause();
+                console.log('video player pause')
             }
             });
 
