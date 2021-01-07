@@ -17,7 +17,7 @@ export default {
       
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
@@ -42,7 +42,7 @@ export default {
        
       /* module options */
       },
-      prefetch: true,
+      // prefetch: true,
       preload: true,
       display:'swap',
       useStylesheet:true,
