@@ -1,6 +1,5 @@
 <template>
   <div>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@350&display=swap" rel="stylesheet">
       <header class="header-main">
         
         <hgroup class="header-main-split">

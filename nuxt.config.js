@@ -4,11 +4,11 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'hm',
+    title: 'Hypothesis Media',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Broadcast & live event innovation consultancy specialising in audience interaction & fan engagement with content & technology' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -28,8 +28,20 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-  ],
-
+      '@nuxtjs/google-fonts'
+    ],
+    googleFonts: {
+      families: {
+        Oswald: [350],
+       
+      /* module options */
+      },
+      prefetch: true,
+      preload: true,
+      display:'swap',
+      useStylesheet:true,
+    }, 
+  
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
   ],
