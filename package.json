@@ -15,7 +15,8 @@
     "animejs": "^3.2.1",
     "core-js": "^3.6.5",
     "debug": "^4.3.1",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "webpack": "^5.11.1"
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.4.0",

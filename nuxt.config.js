@@ -35,21 +35,24 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
       '@nuxtjs/google-fonts',
-      '@nuxtjs/dotenv'
+      '@nuxtjs/dotenv',
+      '@nuxtjs/google-analytics'
     ],
     googleFonts: {
       families: {
         Oswald: [350],
-       
-      /* module options */
       },
       // prefetch: true,
       preload: true,
       display:'swap',
-      useStylesheet:true,
+      // useStylesheet:true,
     }, 
     googleAnalytics: {
       id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
+      debug: {
+        enabled: true,
+        sendHitTask: true
+      }
     },
   
   // Modules (https://go.nuxtjs.dev/config-modules)
