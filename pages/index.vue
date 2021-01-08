@@ -11,8 +11,18 @@
         <VideoLoop class="videoLoop" v-if="!reel"         
           src="https://cdn.muse.ai/w/ca560fe03e91517f91d2fb618bb3e3f4d2bd425dc3324c4658afb4d24d7d27df/videos/video.mp4" />
         
-        <Showreel v-if="reel" @reelEnded="toggleReel"         
+        <!-- <VideoLoop class="videoLoop" v-if="!reel"         
+          src="https://res.cloudinary.com/fifteennine/video/upload/q_55/v1610129156/_/hm/loop_edited720.mp4" /> -->
+        
+        <!-- 
+          
+          7 MB loop 
+          <Showreel v-if="reel" @reelEnded="toggleReel"         
           src="https://cdn.muse.ai/w/91b2ad0efd0a145169528a7df382792b82f5e050a8247a644f1bf36fe48bf5d0/videos/video.mp4" />
+         -->
+         <!-- full on loop-->
+        <Showreel v-if="reel" @reelEnded="toggleReel"         
+          src="https://cdn.muse.ai/w/57522cc9104bd8eb4310e39e1201879578124d13f7c62c4a533f4fe1770b1e73/videos/video.mp4" />
         
 
       <div class="playshowreel"> 

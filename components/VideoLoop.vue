@@ -16,9 +16,21 @@
         <p class="playshowreel-button">play showreel</p>
         </div> -->
 
-      <video ref="js-loop-player" class="video-player" :class="{is_loading:loading}" loop muted playsinline autoplay @canplay="canPlay">
+      <video ref="js-loop-player" class="video-player" :class="{is_loading:loading}" loop muted playsinline autoplay  
+      @canplay="canPlay"
+      @loadedmetadata="mev($event,'loadedmetadata')"
+      @loadstart="mev($event,'loadstart')"
+      @loadeddata="mev($event,'loadeddata')"
+      @error="mev($event,'error')"
+      @canplaythrough="mev($event,'canplaythrough')"
+
+      >
         <source :src="src" type="video/mp4">
       </video>
+
+      <!-- <iframe  src="https://mwuse.ai/embed/j378bor?links=0&autoplay=1&loop=1&style=no-controls&muted=1" width="576" height="324" frameborder="0" allowfullscreen></iframe> -->
+<!-- <iframe src="https://muse.ai/embed/j378bor?links=0&autoplay=1&loop=1&style=no-controls" width="576" height="324" frameborder="0" allowfullscreen class="video-player" ></iframe> -->
+
 </div>
 
 </template>
@@ -38,35 +50,41 @@ export default{
     },
     mounted(){
 
-        let options = {
-            rootMargin: '0px',
-            threshold: [...Array(30).keys()].map(x => x / 29),
-        }
+        // let options = {
+        //     rootMargin: '0px',
+        //     threshold: [...Array(30).keys()].map(x => x / 29),
+        // }
 
-        this.observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {    
-            if(entry.isIntersecting){
-                if(entry.intersectionRatio > .5){
-                    this.play();
-                    console.log('video player play')
-                }
-            }
-            else{
-                this.pause();
-                console.log('video player pause')
-            }
-            });
+        // this.observer = new IntersectionObserver((entries) => {
+        // entries.forEach(entry => {  
+        //     if(this.loading){
+        //       return;
+        //     }  
+        //     if(entry.isIntersecting){
+        //         if(entry.intersectionRatio > .5){
+        //             this.play();
+        //             console.log('video player play')
+        //         }
+        //     }
+        //     else{
+        //         this.pause();
+        //         console.log('video player pause')
+        //     }
+        //     });
 
-        },options);
-        this.observer.observe(this.$refs['js-loop-player']);
+        // },options);
+        // this.observer.observe(this.$refs['js-loop-player']);
     },
     beforeDestroy(){
-        this.observer.unobserve(this.$refs['js-loop-player']);
+        // this.observer.unobserve(this.$refs['js-loop-player']);
     },
   methods:{
+    mev(e,d){
+      console.log('media event:',d,e)
+    },
     canPlay(e){
       this.loading = false;
-      console.log('canplay')
+      console.log('canplay');
     },
     play(){
       // this.$refs['js-loop-player'].play();
@@ -86,7 +104,7 @@ export default{
 <style scoped>
 /* The animation code */
 @keyframes fadein{
-  from{ opacity:0}
+  from{ opacity:1}
   to{ opacity:1}
   
 }
