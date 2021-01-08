@@ -34,7 +34,8 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-      '@nuxtjs/google-fonts'
+      '@nuxtjs/google-fonts',
+      '@nuxtjs/dotenv'
     ],
     googleFonts: {
       families: {
@@ -47,6 +48,9 @@ export default {
       display:'swap',
       useStylesheet:true,
     }, 
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
+    },
   
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [

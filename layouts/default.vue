@@ -42,7 +42,9 @@ export default{
     },
     mounted(){
 
-   
+      console.log(process.env.GOOGLE_ANALYTICS_ID)
+
+      
       const slides = document.querySelectorAll('.js-observed');
       console.log('slides? •*•', slides)
 
