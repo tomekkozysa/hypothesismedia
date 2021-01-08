@@ -79,7 +79,8 @@
     height:auto;
     max-height:80vh;
 
-    width:100%;
+    /* width:100%; */
+    max-width:100%;
     
 
 
