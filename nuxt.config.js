@@ -49,10 +49,10 @@ export default {
     }, 
     googleAnalytics: {
       id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
-      debug: {
-        enabled: true,
-        sendHitTask: true
-      }
+      // debug: {
+      //   enabled: true,
+      //   sendHitTask: true
+      // }
     },
   
   // Modules (https://go.nuxtjs.dev/config-modules)
