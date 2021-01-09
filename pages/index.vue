@@ -22,7 +22,7 @@
          -->
          <!-- full on loop-->
         <Showreel v-if="reel" @reelEnded="toggleReel"         
-          src="https://cdn.muse.ai/w/57522cc9104bd8eb4310e39e1201879578124d13f7c62c4a533f4fe1770b1e73/videos/video.mp4" />
+          src="https://cdn.muse.ai/w/91b2ad0efd0a145169528a7df382792b82f5e050a8247a644f1bf36fe48bf5d0/videos/video.mp4" />
         
 
       <div class="playshowreel"> 
