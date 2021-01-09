@@ -104,7 +104,7 @@ export default{
 <style scoped>
 /* The animation code */
 @keyframes fadein{
-  from{ opacity:1}
+  from{ opacity:0}
   to{ opacity:1}
   
 }
