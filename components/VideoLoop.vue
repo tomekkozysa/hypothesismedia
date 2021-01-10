@@ -46,8 +46,7 @@ export default{
     data(){
         return{
           loading:true,
-          version:'100121.02'
-          
+          version:'100121.02',          
         }
     },
     mounted(){  
