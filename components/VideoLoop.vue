@@ -4,7 +4,7 @@
         <div class="headline-holder">
           <h3 class="headline">
             Audience Interactivity &amp;&nbsp;Participation
-            <!-- loop version 100121.01 -->
+            <!-- loop version {{version}} -->
           </h3> 
         
         </div>
@@ -46,10 +46,13 @@ export default{
     data(){
         return{
           loading:true,
+          version:'100121.02'
           
         }
     },
-    mounted(){
+    mounted(){  
+
+        console.log('version', version)
 
         // let options = {
         //     rootMargin: '0px',
