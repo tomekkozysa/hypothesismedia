@@ -36,7 +36,7 @@ export default {
   buildModules: [
       '@nuxtjs/google-fonts',
       '@nuxtjs/dotenv',
-      '@nuxtjs/google-analytics'
+      // '@nuxtjs/google-analytics'
     ],
     googleFonts: {
       families: {
@@ -47,7 +47,16 @@ export default {
       display:'swap',
       // useStylesheet:true,
     }, 
-    googleAnalytics: {
+    // googleAnalytics: {
+    //   id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
+    //   // debug: {
+    //   //   enabled: true,
+    //   //   sendHitTask: true
+    //   // }
+    // },
+    // // example config
+ 
+    'google-gtag': {
       id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
       // debug: {
       //   enabled: true,
