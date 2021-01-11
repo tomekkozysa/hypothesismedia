@@ -4,11 +4,6 @@ export default {
   
   data(){
     return{
-      
-
-
-
-
       title:"Years & Years",
       channel:"Channel 4",
       blurb:"Live Dynamic Broadcast Advertising",
@@ -19,6 +14,11 @@ export default {
       observer:null,
     }
   },  
+  head() {
+    return {
+      title: this.title + ' | ',
+    }
+  }
 }
 </script>
 

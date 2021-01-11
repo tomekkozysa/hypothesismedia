@@ -15,6 +15,11 @@ export default {
       observer:null,
     }
   },  
+  head() {
+    return {
+      title: this.title + ' | ',
+    }
+  }
 }
 </script>
 

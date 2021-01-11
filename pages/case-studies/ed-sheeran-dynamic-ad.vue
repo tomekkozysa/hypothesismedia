@@ -5,10 +5,6 @@ export default {
   data(){
     return{
       
-
-
-
-
       title:"Ed Sheeran",
       channel:"E4",
       blurb:"Live Dynamic Broadcast Advertising",
@@ -19,6 +15,11 @@ export default {
       observer:null,
     }
   },  
+  head() {
+    return {
+      title: this.title + ' | ',
+    }
+  }
 }
 </script>
 

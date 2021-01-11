@@ -13,7 +13,12 @@ export default {
       stats:"12.5% of all live TV audience played along",
       text:{},
     }
-  },  
+  }, 
+  head() {
+    return {
+      title: this.title + ' | ',
+    }
+  } 
 }
 </script>
 

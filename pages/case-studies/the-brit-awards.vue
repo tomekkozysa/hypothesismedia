@@ -14,6 +14,11 @@ export default {
       text:{},
     }
   },  
+  head() {
+    return {
+      title: this.title + ' | ',
+    }
+  }
 }
 </script>
 
