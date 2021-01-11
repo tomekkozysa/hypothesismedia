@@ -1,39 +1,21 @@
 <template>
-    
-     <div class="video-player-frame"> 
+    <div class="video-player-frame"> 
         <div class="headline-holder">
           <h3 class="headline">
-            Audience Interactivity &amp;&nbsp;Participation
-            <!-- loop version {{version}} -->
-          </h3> 
-        
+            Audience Interactivity &amp;&nbsp;Participation            
+          </h3>         
         </div>
-       <svg class="homepage-intro-story-border" width="640" height="480" >
+        <svg class="homepage-intro-story-border" width="640" height="480" >
           <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
         </svg>
-
-
-        <!-- <div class="playshowreel"> 
-        <p class="playshowreel-button">play showreel</p>
-        </div> -->
-
-      <video ref="js-loop-player" class="video-player" :class="{is_loading:loading}" loop muted playsinline autoplay  
-      @canplay="canPlay"
-      @error="mev($event,'error')"
-      >
-        <source :src="src" type="video/mp4">
+        <video ref="js-loop-player" class="video-player" :class="{is_loading:loading}" loop muted playsinline autoplay  
+          @canplay="canPlay"
+          @error="mev($event,'error')"
+        >
+          <source :src="src" type="video/mp4">
       </video>
-      <!-- 
-        removed events
-        @loadedmetadata="mev($event,'loadedmetadata')"
-      @loadstart="mev($event,'loadstart')"
-      @loadeddata="mev($event,'loadeddata')"
-      
-      @canplaythrough="mev($event,'canplaythrough')"
-
--->
-</div>
-
+    <!-- loop version {{version}} -->
+    </div>
 </template>
 
 <script>
@@ -112,7 +94,7 @@ export default{
   
 }
 .headline{
-      color:rgba(255,255,255,.9);
+    color:rgba(255,255,255,.9);
     text-shadow:2px 2px 30px rgba(0,0,0,.75);
 
     padding:0;
@@ -164,13 +146,6 @@ justify-content: center;
 
 }
 
-/* @media (max-width: 961px) {
-  .video-player-frame{
-    height: 70vh;
-    margin-top:0;
-  }
-} */
-
 
 .video-player{
 
@@ -208,9 +183,7 @@ justify-content: center;
   transition:all .75s;
 
 
-    /* stroke-dasharray: var(--story-border-length) var(--story-border-space); */
-  /* stroke-dashoffset: var(--story-border-offset); */
-  
+   
 
   stroke-width: var(--story-border-sw);
   stroke:pink;
@@ -235,7 +208,4 @@ justify-content: center;
   transform:translate(20px, 20px);
   }
 }
-
-
-
 </style>
