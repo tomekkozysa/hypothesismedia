@@ -9,13 +9,19 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Broadcast and live event innovation consultancy specialising in audience interaction and fan engagement with content and technology' },
-      { hid: 'og:image', property: 'og:image', content: "/og-image.png" },
-      { hid: 'og:image:height', property: 'og:image:height', content: "1000" },
-      { hid: 'og:image:width', property: 'og:image:width', content: "1000" },
-      { hid: 'og:description', property: 'og:description', content: "Broadcast and live event innovation consultancy specialising in audience interaction and fan engagement with content and technology" },
+     
+      { hid: 'og:url', property: 'og:url', content: "https://hypothesis-media.co.uk" },
       { hid: 'og:title', property: 'og:title', content: "Hypothesis Media" },
-      { hid: 'og:title', property: 'og:url', content: "hypothesis-media.co.uk" },
+      { hid: 'og:description', property: 'og:description', content: "Broadcast and live event innovation consultancy specialising in audience interaction and fan engagement with content and technology" },
+      { hid: 'og:image', property: 'og:image', content: "/ogimagewide.png" },    
       
+      { hid: 'twitter:domain', property: 'twitter:domain', content: "hypothesis-media.co.uk" },
+      { hid: 'twitter:url', property: 'twitter:url', content: "https://hypothesis-media.co.uk" },
+      { hid: 'twitter:title', property: 'twitter:title', content: "Hypothesis Media" },
+      { hid: 'twitter:description', property: 'twitter:description', content: "Broadcast and live event innovation consultancy specialising in audience interaction and fan engagement with content and technology" },
+      { hid: 'twitter:image', property: 'twitter:image', content: "/ogimagewide.png" },
+
+
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -37,37 +43,23 @@ export default {
   buildModules: [
       '@nuxtjs/google-fonts',
       '@nuxtjs/dotenv',
-      // '@nuxtjs/google-analytics'
-    ],
-    googleFonts: {
-      families: {
-        Oswald: [350],
-      },
-      // prefetch: true,
-      preload: true,
-      display:'swap',
-      // useStylesheet:true,
-    }, 
-    // googleAnalytics: {
-    //   id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
-    //   // debug: {
-    //   //   enabled: true,
-    //   //   sendHitTask: true
-    //   // }
-    // },
-    // // example config
- 
-    'google-gtag': {
-      id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
-      // debug: {
-      //   enabled: true,
-      //   sendHitTask: true
-      // }
+  ],
+  googleFonts: {
+    families: {
+      Oswald: [350],
     },
-  
+    // prefetch: true,
+    preload: true,
+    display:'swap',
+    // useStylesheet:true,
+  }, 
+  'google-gtag': {
+    id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
+    // debug: { enabled: true, sendHitTask: true }
+  },
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // Simple usage
     '@nuxtjs/google-gtag',
     '@nuxtjs/sitemap',
   ],
