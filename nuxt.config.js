@@ -9,7 +9,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Broadcast & live event innovation consultancy specialising in audience interaction & fan engagement with content & technology' },
-      { hid: 'og:image', property: 'og:image', content: "/og-image.jpg" },
+      { hid: 'og:image', property: 'og:image', content: "/og-image.png" },
       { hid: 'og:image:height', property: 'og:image:height', content: "126" },
       { hid: 'og:description', property: 'og:description', content: "Broadcast &amp; live event innovation consultancy specialising in audience interaction &amp; fan engagement with content &amp; technology" },
       { hid: 'og:title', property: 'og:title', content: "Hypothesis Media" },
