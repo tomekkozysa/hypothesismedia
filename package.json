@@ -13,6 +13,7 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/google-fonts": "^1.2.0",
     "@nuxtjs/google-gtag": "^1.0.4",
+    "@nuxtjs/sitemap": "^2.4.0",
     "animejs": "^3.2.1",
     "core-js": "^3.6.5",
     "debug": "^4.3.1",

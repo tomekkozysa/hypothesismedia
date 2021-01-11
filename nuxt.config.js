@@ -68,8 +68,12 @@ export default {
   modules: [
     // Simple usage
     '@nuxtjs/google-gtag',
+    '@nuxtjs/sitemap',
   ],
-
+  sitemap: {
+    hostname: 'https://hypothesis-media.co.uk',
+    gzip: true,
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   },
