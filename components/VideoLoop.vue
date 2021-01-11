@@ -51,7 +51,7 @@ export default{
     },
     mounted(){  
 
-        console.log('version', this.tversion)
+        console.log('version', this.version)
 
         // let options = {
         //     rootMargin: '0px',
