@@ -101,7 +101,7 @@ export default{
     font-size:var(--fs-headline); letter-spacing:-.04em;
     /* font-weight:500; */
     line-height:1;
-    transition:all .5s;
+    /* transition:all .5s; */
     font-family: var(--ff-oswald);
     text-transform: uppercase;
     text-align: center;
@@ -111,7 +111,7 @@ export default{
     user-select: none;
     animation-name:fadein;
     animation-duration:.5s;
-    animation-delay:1s;
+    animation-delay:2s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     
@@ -163,11 +163,11 @@ justify-content: center;
   object-fit:cover;
 
   opacity:.75;
-  transition:opacity 1.5s ease-in-out .5s;
+  transition:opacity .25s ease-in-out; 
 
 }
 .video-player.is_loading{
-  opacity:.1;
+  opacity:0;
    
 }
 
