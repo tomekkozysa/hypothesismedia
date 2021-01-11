@@ -162,7 +162,7 @@ justify-content: center;
   mix-blend-mode: screen;
   object-fit:cover;
 
-  opacity:.5;
+  opacity:.75;
   transition:opacity 1.5s ease-in-out .5s;
 
 }
