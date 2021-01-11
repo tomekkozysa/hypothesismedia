@@ -97,27 +97,9 @@ export default {
   },
 }
 
-
-
-
-
-
-
-
 </script>
 
 <style scoped>
-/* 
-@keyframes slidein {
-  from { transform: translateY(40px); opacity:0}
-  to   { transform: translateY(0); opacity:1}
-}
-
-
-.is_active .homepage-story-slide-content{
-animation-duration: .75s;
-  animation-name: slidein;
-} */
 
 
 .homepage-story{
@@ -126,15 +108,6 @@ animation-duration: .75s;
     
 }
 
-
-/*
-.homepage-story-slide:nth-child(odd){
-  border:1px solid yellow;
-  }
-.homepage-story-slide:nth-child(even){
-  border:1px solid red;
-  }
-*/
   
 .homepage-story-slide{
 
@@ -142,12 +115,9 @@ animation-duration: .75s;
   min-height:80vh;
   
   margin-top:calc(0 - var(--u-slide-shift-y));
-  /* padding:10vh 0; */
   max-width: var(--l-max-w);
   padding:var(--u-slide-shift-y) var(--l-padding-rl);
   
-  /* opacity: 0; */
-
 }
 .homepage-story-carousel{
   max-width: var(--l-max-w);
@@ -220,17 +190,6 @@ footer{
   background:rgba(0,0,0,.2);
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .who-we-are-copy{
   columns: 2;
   column-gap: 2em;
@@ -247,9 +206,8 @@ footer{
  }
 
 
-
 .playshowreel{
-  /* background: yellow; */
+  
   justify-self: flex-end;
 }
 .playshowreel-button{
@@ -261,13 +219,8 @@ footer{
 text-align:center;
    cursor:pointer;
 
-  /* justify-self: flex-end; */
-  /* bottom:0; */
+  
 }
-
-
-
-
 </style>
 
 

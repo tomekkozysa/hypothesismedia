@@ -19,19 +19,19 @@
 
       <video ref="js-loop-player" class="video-player" :class="{is_loading:loading}" loop muted playsinline autoplay  
       @canplay="canPlay"
-      @loadedmetadata="mev($event,'loadedmetadata')"
-      @loadstart="mev($event,'loadstart')"
-      @loadeddata="mev($event,'loadeddata')"
       @error="mev($event,'error')"
-      @canplaythrough="mev($event,'canplaythrough')"
-
       >
         <source :src="src" type="video/mp4">
       </video>
+      <!-- 
+        removed events
+        @loadedmetadata="mev($event,'loadedmetadata')"
+      @loadstart="mev($event,'loadstart')"
+      @loadeddata="mev($event,'loadeddata')"
+      
+      @canplaythrough="mev($event,'canplaythrough')"
 
-      <!-- <iframe  src="https://mwuse.ai/embed/j378bor?links=0&autoplay=1&loop=1&style=no-controls&muted=1" width="576" height="324" frameborder="0" allowfullscreen></iframe> -->
-<!-- <iframe src="https://muse.ai/embed/j378bor?links=0&autoplay=1&loop=1&style=no-controls" width="576" height="324" frameborder="0" allowfullscreen class="video-player" ></iframe> -->
-
+-->
 </div>
 
 </template>
