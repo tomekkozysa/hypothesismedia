@@ -35,9 +35,9 @@
                <img src="/img/viewer-engagement.jpg" class="expander-image" />
             </div>
             <div class="expander-copy">
-                <p>Using our extensive expertise and understanding of live audience behaviours we work to enhance existing shows and titles to increase audience interaction with complementary editorial engagement enhancements. </p>
-                <p>Introducing new interactive features and mechanics giving live shows and events a unique interactive enhancement angle. </p>
-                <p>Having worked on new breakout interactive formats across broadcast entertainment, sport, news, music & live events as well as enhancing existing well known titles we are expertly placed to supersize your production with engagement and interactive features that are resonating innovations, not gimmicks. </p>
+                <p>Using our extensive expertise and understanding of live audience behaviours we work to enhance existing shows and titles to increase audience interaction with complementary editorial engagement enhancements.</p>
+                <p>Introducing new interactive features and mechanics giving live shows and events a unique interactive enhancement angle.</p>
+                <p>Having worked on new breakout interactive formats across broadcast entertainment, sport, news, music & live events,  we are expertly placed to supersize your production with engagement and interactive features that are resonating innovations, not gimmicks.</p>
             </div>
           </div>
 
