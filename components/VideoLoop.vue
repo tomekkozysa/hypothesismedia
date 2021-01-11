@@ -111,7 +111,7 @@ export default{
     user-select: none;
     animation-name:fadein;
     animation-duration:.5s;
-    animation-delay:2s;
+    animation-delay:1.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     
@@ -193,6 +193,9 @@ justify-content: center;
   grid-row: 1 / 3;
 
   border-radius:1.1em;
+
+
+
 
   
 }
