@@ -192,7 +192,7 @@ justify-content: center;
 
 }
 .video-player.is_loading{
-  opacity:.5;
+  opacity:.1;
    
 }
 
