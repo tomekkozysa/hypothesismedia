@@ -1,0 +1,20 @@
+/* TEAM */
+                           
+Your title: Tomasz Kozysa
+
+Site: https://kozysa.me
+Twitter: @tokya
+Location: London
+Live: 2021/01/11
+
+/* THANKS */
+Name: Tom @Hypothesis Media, James for connection,    
+
+/* SITE */
+                            
+Last update: 2021/01/11                             
+Standards: HTML5, CSS3
+Components: Nuxt
+
+                            
+Software: nuxt, yarn, v-code, figma, google hangouts
