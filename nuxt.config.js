@@ -13,13 +13,13 @@ export default {
       { hid: 'og:url', property: 'og:url', content: "https://hypothesis-media.co.uk" },
       { hid: 'og:title', property: 'og:title', content: "Hypothesis Media" },
       { hid: 'og:description', property: 'og:description', content: "Broadcast and live event innovation consultancy specialising in audience interaction and fan engagement with content and technology" },
-      { hid: 'og:image', property: 'og:image', content: "/ogimagewide.png" },    
+      { hid: 'og:image', property: 'og:image', content: "https://hypothesis-media.co.uk/ogimagewide.png" },    
       
       { hid: 'twitter:domain', property: 'twitter:domain', content: "hypothesis-media.co.uk" },
       { hid: 'twitter:url', property: 'twitter:url', content: "https://hypothesis-media.co.uk" },
       { hid: 'twitter:title', property: 'twitter:title', content: "Hypothesis Media" },
       { hid: 'twitter:description', property: 'twitter:description', content: "Broadcast and live event innovation consultancy specialising in audience interaction and fan engagement with content and technology" },
-      { hid: 'twitter:image', property: 'twitter:image', content: "/ogimagewide.png" },
+      { hid: 'twitter:image', property: 'twitter:image', content: "https://hypothesis-media.co.uk/ogimagewide.png" },
 
 
     ],
