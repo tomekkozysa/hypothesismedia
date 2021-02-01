@@ -9,7 +9,7 @@ export default {
       blurb:"Live Dynamic Broadcast Advertising",
       main_image:'years-years.jpg',
       vimeo_id:133337331,
-      stats:"5% of all UK TV viewing public watching",
+      stats:"More viewers watching this ad than the TV show around it, 14,000 tweets received in 4 minutes",
       text:{},
       observer:null,
     }
