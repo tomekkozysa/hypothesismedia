@@ -164,6 +164,7 @@ justify-content: center;
 
   opacity:.75;
   transition:opacity .25s ease-in-out; 
+  overflow:hidden;
 
 }
 .video-player.is_loading{
