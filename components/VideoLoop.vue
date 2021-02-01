@@ -164,6 +164,7 @@ justify-content: center;
 
   opacity:.75;
   transition:opacity .25s ease-in-out; 
+  /* not sure why chrome needs it all of sudden! 1.02.2021 */
   overflow:hidden;
 
 }
