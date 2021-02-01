@@ -43,7 +43,7 @@ scrollToTop: true,
 
 
 
-.cs-single{
+.main.cs-single{
   /* padding:var(--u-hss-padding); */
   max-width: var(--l-max-w);
   padding:var(--u-slide-shift-y) var(--l-padding-rl);
