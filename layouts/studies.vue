@@ -90,6 +90,15 @@ scrollToTop: true,
     margin-top:2em;
     font-size: var(--fs-body);
 }
+.cs-single-list{
+    list-style:none;
+    padding:0;
+    margin-top:2em;
+    font-size: var(--fs-body);
+}
+.cs-single-list li{
+  margin-top:1em;
+}
 .cs-single-channel{
   margin-top:.25em;
   font-size:var(--fs-cs-single-channel);
