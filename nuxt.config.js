@@ -27,7 +27,11 @@ export default {
 
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'prefetch',
+        href: 'https://cdn.muse.ai/w/ca560fe03e91517f91d2fb618bb3e3f4d2bd425dc3324c4658afb4d24d7d27df/videos/video.mp4'
+      }
     ]
   },
 
