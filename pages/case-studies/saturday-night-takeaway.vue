@@ -5,7 +5,7 @@ export default {
   data(){
     return{
       title:"Ant & Dec's Saturday Night Takeaway",
-      channel:"",
+      channel:"ITV",
       blurb:"Virtual Interactive Audience",
       main_image:'virtual-audience-wide-case-study.jpg',
       vimeo_id:516306634,
