@@ -5,6 +5,26 @@
 
 
 
+         <NuxtLink class="case-study-teaser-link" to="/case-studies/the-brit-awards">
+<div class="case-study-teaser">
+            <div class="case-study-teaser-media">
+              <div class="case-study-teaser-img-frame">
+              <img src="/img/v3/saturday-night-takeaway.jpg" class="case-study-teaser-img">
+              </div>
+               <svg class="faux-border" width="640" height="480" >
+                <rect class="animated-stroke" x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="none" />
+                </svg>
+            </div>
+            <div class="case-study-teaser-caption" >
+          <h3 class="case-study-headline">Ant & Dec's Saturday Night Takeaway</h3>
+          <p class="case-study-data">
+            Over 320 families live on screen, half a million virtual audience ticket requests across the series</p>
+          <p class="case-study-blurb">Virtual Interactive Audience</p>
+          </div>
+        </div>
+
+              </NuxtLink>
+
 
 
 
