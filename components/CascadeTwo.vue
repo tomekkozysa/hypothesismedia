@@ -5,7 +5,7 @@
 
 
 
-         <NuxtLink class="case-study-teaser-link" to="/case-studies/the-brit-awards">
+         <NuxtLink class="case-study-teaser-link" to="/case-studies/saturday-night-takeaway">
 <div class="case-study-teaser">
             <div class="case-study-teaser-media">
               <div class="case-study-teaser-img-frame">
